@@ -1,0 +1,20 @@
+{
+    "name": "nextgenthemes/wp-shared",
+    "type": "wp-package",
+    "license": "GPL-3.0",
+    "autoload": {
+        "files": [
+            "includes/WP/load-files.php",
+            "includes/WP/Admin/load-admin-files.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Nicolas Jonas"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "version": "2024.12.09.19.35.17"
+}

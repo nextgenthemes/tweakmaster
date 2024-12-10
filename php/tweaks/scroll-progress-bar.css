@@ -1,0 +1,20 @@
+.wp-tweak-scroll {
+	position: fixed;
+	top: calc(var(--wp-tweak-admin-bar-space, 0px) + var(--wp--custom--navbar--height, 0px));
+	left: 0;
+	width: 100dvw;
+	z-index: 5;
+	pointer-events: none;
+}
+
+@media (min-width: 603px) {
+	.admin-bar {
+		--wp-tweak-admin-bar-space: 46px;
+	}
+}
+
+@media (min-width: 783px) {
+	.admin-bar {
+		--wp-tweak-admin-bar-space: 32px;
+	}
+}
