@@ -9,27 +9,15 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\init_admin' );
 
 function init_public(): void {
 
-	require_once __DIR__ . '/Base.php';
 	require_once __DIR__ . '/fn-settings.php';
 
 	$settings = settings_data();
-	unset( $settings['scroll-progress-bar'] ); // uses options api
+	$settings->remove( 'scroll-progress-bar' ); // uses options api
 
-	foreach ( $settings as $key => $setting ) {
+	foreach ( $settings->get_all() as $key => $setting ) {
 
-		$tweak_file = 'boolean' === $setting['type']
-			? TWEAKS_DIR . "/bool/$key.php"
-			: TWEAKS_DIR . "/$key.php";
-
-		if ( defined( 'WP_DEBUG' ) && WP_DEBUG
-			&& ! file_exists( $tweak_file )
-			&& 'boolean' === $setting['type']
-		) {
-			wp_trigger_error( __FUNCTION__, 'Tweak file not found: ' . $tweak_file );
-		}
-
-		if ( 'boolean' === $setting['type'] && option_is_set( $key ) ) {
-			require_once $tweak_file;
+		if ( 'boolean' === $setting->type && option_is_set( $key ) ) {
+			require_once TWEAKS_DIR_SA . "/$key.php";
 		}
 	}
 
@@ -37,19 +25,22 @@ function init_public(): void {
 		require_once TWEAKS_DIR . '/image-quality.php';
 	}
 
-	if ( option_is_set( 'admin-bar-greeting' ) ) {
-		require_once TWEAKS_DIR . '/set-admin-bar-greeting.php';
-	}
-
 	if ( ! defined( 'EMPTY_TRASH_DAYS' ) && option_is_set( 'trash-keep-days' ) ) {
 		require_once TWEAKS_DIR . '/set-trash-keep-days.php';
 	}
 
-	if ( option_is_set( 'scroll-progress-bar' ) ) {
-		require_once TWEAKS_DIR . '/scroll-progress-bar.php';
-	}
-
 	require_once TWEAKS_DIR . '/revisions-to-keep.php';
+
+	require_file_if_option_is_set( 'admin-bar-greeting' );
+	require_file_if_option_is_set( 'scroll-progress-bar' );
+	require_file_if_option_is_set( 'user-agent' );
+}
+
+function require_file_if_option_is_set( string $key ): void {
+
+	if ( option_is_set( $key ) ) {
+		require_once TWEAKS_DIR . "/$key.php";
+	}
 }
 
 function init_admin(): void {

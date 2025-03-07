@@ -1,11 +1,14 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types = 1);
+
 namespace Nextgenthemes\WP\Admin;
 
 use Nextgenthemes\WP\Admin\EDD\PluginUpdater;
 use Nextgenthemes\WP\Admin\EDD\ThemeUpdater;
-use const Nextgenthemes\ARVE\VERSION;
 use function Nextgenthemes\WP\get_products;
 use function Nextgenthemes\WP\str_contains_any;
+use const Nextgenthemes\ARVE\VERSION;
 
 function init_edd_updaters( array $options ): void {
 

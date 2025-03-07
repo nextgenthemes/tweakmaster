@@ -6,8 +6,8 @@
  * @license   GPL-3.0
  *
  * @wordpress-plugin
- * Plugin Name:      Disable Contact Form 7 auto paragraph creation
- * Description:      Sets wpcf7_autop_or_not filter to false
+ * Plugin Name:      Disable Email Login
+ * Description:      Disable Email Login
  * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
@@ -17,4 +17,6 @@
 
 declare(strict_types = 1);
 
-add_filter( 'wpcf7_autop_or_not', '__return_false');
+namespace Nextgenthemes\WPtweak;
+
+remove_filter( 'authenticate', 'wp_authenticate_email_password', 20 );

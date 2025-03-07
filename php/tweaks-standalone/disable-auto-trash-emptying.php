@@ -19,7 +19,7 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\WPtweak;
 
-add_action( 'init', __NAMESPACE__ . '\disable_auto_trash_emptying');
+add_action( 'init', __NAMESPACE__ . '\disable_auto_trash_emptying' );
 
 function disable_auto_trash_emptying(): void {
 	remove_action( 'wp_scheduled_delete', 'wp_scheduled_delete' );

@@ -27,7 +27,7 @@
 	"repositories": {
 		"nextgenthemes/wp-shared": {
 			"type": "path",
-			"url": "../advanced-responsive-video-embedder/vendor/nextgenthemes/wp-shared",
+			"url": "../../../../../../dev/composer-packages/wp-shared",
 			"options": {
 				"symlink": false
 			}
@@ -37,7 +37,10 @@
 		"build": [
 			"@composer update"
 		],
-		"pre-update-cmd": [],
+		"pre-update-cmd": [
+			"rsync --delete -av ../advanced-responsive-video-embedder/vendor/nextgenthemes/wp-shared ${HOME}/dev/composer-packages/",
+			"@composer --working-dir ${HOME}/dev/composer-packages/wp-shared config version $(php -r \"echo (new DateTime())->format('Y.m.d.H.i.s');\")"
+		],
 		"tests": []
 	}
 }

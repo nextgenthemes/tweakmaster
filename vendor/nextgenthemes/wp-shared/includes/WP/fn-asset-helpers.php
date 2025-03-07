@@ -1,4 +1,7 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types = 1);
+
 namespace Nextgenthemes\WP;
 
 require_once __DIR__ . '/Asset.php';
@@ -50,4 +53,21 @@ function add_dep_to_asset( $asset, string $dep ): bool {
 	}
 
 	return true;
+}
+
+function asset_php( string $path, string $key, array $deps = array() ): string {
+
+	switch ( $key ) {
+		case 'ver':
+			$key = 'version';
+			break;
+		case 'deps':
+			$key = 'dependencies';
+			break;
+	}
+
+	$data                 = require $path;
+	$data['dependencies'] = array_merge( $data['dependencies'], $deps );
+
+	return $data[ $key ];
 }

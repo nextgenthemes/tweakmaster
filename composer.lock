@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5aa486b2e15e5a77b655cb1dccf2d827",
+    "content-hash": "6c89ef06b0b7d56ebe97a93df2969c75",
     "packages": [],
     "packages-dev": [
         {
@@ -73,11 +73,11 @@
         },
         {
             "name": "nextgenthemes/wp-shared",
-            "version": "2024.12.09.19.35.17",
+            "version": "2025.02.18.17.30.07",
             "dist": {
                 "type": "path",
-                "url": "../advanced-responsive-video-embedder/vendor/nextgenthemes/wp-shared",
-                "reference": "9b2f33faad7236459c58037eb409dbe8cb82aaba"
+                "url": "../../../../../../dev/composer-packages/wp-shared",
+                "reference": "bf16bea38ab0348bfd6964ffae8a8bd59835b318"
             },
             "require": {
                 "php": ">=7.4"
@@ -85,8 +85,7 @@
             "type": "wp-package",
             "autoload": {
                 "files": [
-                    "includes/WP/load-files.php",
-                    "includes/WP/Admin/load-admin-files.php"
+                    "includes/WP/init.php"
                 ]
             },
             "license": [

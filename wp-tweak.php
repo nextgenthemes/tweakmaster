@@ -23,10 +23,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const VERSION     = '0.0.1';
-const PLUGIN_FILE = __FILE__;
-const PLUGIN_DIR  = __DIR__;
-const TWEAKS_DIR  = __DIR__ . '/php/tweaks';
+const VERSION       = '0.0.1';
+const PLUGIN_FILE   = __FILE__;
+const PLUGIN_DIR    = __DIR__;
+const TWEAKS_DIR    = __DIR__ . '/php/tweaks';
+const TWEAKS_DIR_SA = __DIR__ . '/php/tweaks-standalone';
+
 // For error messages and stuff on the admin screens.
 const ALLOWED_HTML = array(
 	'h1'     => array(),

@@ -7,9 +7,8 @@
  * Pretty much copy pasta from Ryan Hellyer, just added namespacing and strict types
  *
  * @copyright 2023 Ryan Hellyer
- * https://geek.hellyer.kiwi
- * https://wordpress.org/plugins/disable-emojis/
  * https://github.com/ryanhellyer/disable-emojis/
+ * https://wordpress.org/plugins/disable-emojis/
  *
  * @wordpress-plugin
  * Plugin Name:      Disable Emojis (GDPR friendly)

@@ -4,8 +4,51 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\WPtweak;
 
-function settings_data(): array {
-	return array_merge(
+use Nextgenthemes\WP\Settings;
+use Nextgenthemes\WP\SettingsData;
+
+function settings_instance(): Settings {
+
+	static $instance = null;
+
+	if ( null === $instance ) {
+
+		$instance = new Settings(
+			array(
+				'namespace'           => __NAMESPACE__,
+				'base_url'            => plugins_url( '', PLUGIN_FILE ),
+				'base_path'           => PLUGIN_DIR,
+				'plugin_file'         => PLUGIN_FILE,
+				'settings'            => settings_data(),
+				'menu_title'          => esc_html__( 'WP Tweak', 'wp-tweak' ),
+				'settings_page_title' => esc_html__( 'WP Tweak', 'wp-tweak' ),
+				'tabs'                => array(
+					'general'     => array( 'title' => __( 'General', 'wp-tweak' ) ),
+					'privacy'     => array( 'title' => __( 'Privacy', 'wp-tweak' ) ),
+					'media'       => array( 'title' => __( 'Media', 'wp-tweak' ) ),
+					'revisions'   => array( 'title' => __( 'Revisions', 'wp-tweak' ) ),
+					'security'    => array( 'title' => __( 'Security', 'wp-tweak' ) ),
+					'performance' => array( 'title' => __( 'Performance', 'wp-tweak' ) ),
+					'plugins'     => array( 'title' => __( 'Plugins', 'wp-tweak' ) ),
+					'tools'       => array( 'title' => __( 'Tools', 'wp-tweak' ) ),
+				),
+			)
+		);
+	}
+
+	return $instance;
+}
+
+function options(): array {
+	return settings_instance()->get_options();
+}
+
+function default_options(): array {
+	return settings_instance()->get_options_defaults();
+}
+
+function settings_data(): SettingsData {
+	$settings = array_merge(
 		general_settings(),
 		privacy_settings(),
 		media_settings(),
@@ -15,13 +58,15 @@ function settings_data(): array {
 		plugins_settings(),
 		tools_settings()
 	);
+
+	return new SettingsData( $settings );
 }
 
 function general_settings(): array {
 	return array(
 		'remove-asset-ver-parameter' => array(
 			'tab'         => 'general',
-			'label'       => __( 'Remove version query strings ', 'wp-tweak' ),
+			'label'       => __( 'Remove version query strings', 'wp-tweak' ),
 			'description' => __( 'Removes <code>?ver=1.2.3</code> from all styles and scripts.', 'wp-tweak' ),
 			'type'        => 'boolean',
 			'default'     => false,
@@ -57,6 +102,13 @@ function general_settings(): array {
 			'description' => __( 'Replace "Howdy, {name}" with a custom message. Use <code>{name}</code> for the user\'s display name. For example <code>Hi, {name}!</code>. Leave empty for no greeting. Use <code>default</code> for the default greeting, preventing the tweak from running.', 'wp-tweak' ),
 			'type'        => 'string',
 			'default'     => 'default',
+		),
+		'enable-fonts-to-uploads' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Enable fonts to uploads', 'wp-tweak' ),
+			'description' => __( 'Move (Google) Fonts enabled in the Block Editor from wp-content/fonts to wp-content/uploads', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
 		),
 		'disable-auto-trash-emptying' => array(
 			'tab'         => 'general',
@@ -99,6 +151,54 @@ function general_settings(): array {
 			'type'        => 'string',
 			'default'     => '0.4rem',
 		),
+		'disable-ssl-verify-self' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable self SSL verify', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'disable-auto-updates' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable Auto Updates', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'disable-comments' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable Comments', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'disable-email-login' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable Email Login', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'disable-rest-api' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable REST API', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'disable-success-update-emails' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable Success Update Emails', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-admin-bar-logo' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove Admin Bar Logo', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-asset-attr' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove Asset Attributes', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 	);
 }
 
@@ -112,7 +212,7 @@ function security_settings(): array {
 		sprintf(
 			/* translators: %s: example of a "generator" meta tag */
 			__( 'Remove <code>%s</code> from html head', 'wp-tweak' ),
-			esc_html($generator_html)
+			esc_html( $generator_html )
 		),
 		array(
 			'code' => array(),
@@ -127,7 +227,7 @@ function security_settings(): array {
 			'default'     => false,
 		),
 		'remove-wp-version' => array(
-			'tab'         => 'privacy',
+			'tab'         => 'security',
 			'default'     => false,
 			'option'      => true,
 			'label'       => __( 'Remove WP version', 'wp-tweak' ),
@@ -154,6 +254,13 @@ function performance_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
+		'enable-relative-urls' => array(
+			'tab'         => 'performance',
+			'label'       => __( 'Enable relative URLs', 'wp-tweak' ),
+			'description' => __( 'Enable relative URLs in the frontend. This may break your site. Use at your own risk!', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 	);
 }
 
@@ -164,6 +271,13 @@ function media_settings(): array {
 			'default'     => false,
 			'label'       => __( 'Convert jpeg to avif', 'wp-tweak' ),
 			'description' => __( 'Convert uploaded jpeg to avif', 'wp-tweak' ),
+			'type'        => 'boolean',
+		),
+		'enable-clean-upload-filenames' => array(
+			'tab'         => 'media',
+			'default'     => false,
+			'label'       => __( 'Clean upload filenames', 'wp-tweak' ),
+			'description' => __( 'Sanitize media filenames to remove non-latin special characters and accents', 'wp-tweak' ),
 			'type'        => 'boolean',
 		),
 		'avif-compression' => array(
@@ -199,8 +313,8 @@ function privacy_settings(): array {
 		sprintf(
 			// translators: %1$s: Default user agent. %2$s: Chrome user agent.
 			__( 'WP really hates privacy and sends this <code>%1$s</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>%2$s</code> or something else. <code>default</code> will change nothing.', 'wp-tweak' ),
-			esc_html($default_user_agent),
-			esc_html($chrome_user_agent)
+			esc_html( $default_user_agent ),
+			esc_html( $chrome_user_agent )
 		),
 		array(
 			'code' => array(),
@@ -208,7 +322,7 @@ function privacy_settings(): array {
 	);
 
 	return array(
-		'set-user-agent' => array(
+		'user-agent' => array(
 			'tab'         => 'privacy',
 			'default'     => 'default',
 			'option'      => true,
@@ -293,22 +407,20 @@ function tools_settings(): array {
 			'label'       => __( 'Enable maintenance mode', 'wp-tweak' ),
 			'type'        => 'boolean',
 		),
+		'enable-duplicate-post' => array(
+			'tab'         => 'tools',
+			'default'     => false,
+			'label'       => __( 'Enable duplicate post', 'wp-tweak' ),
+			'type'        => 'boolean',
+		),
 	);
-}
-
-function options(): array {
-	return Base::get_instance()->get_settings_instance()->get_options();
-}
-
-function default_options(): array {
-	return Base::get_instance()->get_settings_instance()->get_options_defaults();
 }
 
 function option_is_set( string $key ): bool {
 
-	$default_options = default_options()[ $key ];
+	$default_option = default_options()[ $key ];
 
-	return options()[ $key ] !== $default_options;
+	return options()[ $key ] !== $default_option;
 }
 
 function any_option_is_set( array $options_keys ): bool {
@@ -337,10 +449,9 @@ function get_revision_post_types(): array {
 			continue;
 		}
 
-		$name = ( property_exists( $object, 'labels' )
-				&& property_exists( $object->labels, 'name' )
-				) ? $object->labels->name
-				: $object->name;
+		$name = ( property_exists( $object, 'labels' ) && property_exists( $object->labels, 'name' ) )
+			? $object->labels->name
+			: $object->name;
 
 		$revision_post_types[ $type ] = $name;
 	}

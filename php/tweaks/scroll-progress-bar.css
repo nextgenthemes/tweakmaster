@@ -5,6 +5,10 @@
 	width: 100dvw;
 	z-index: 5;
 	pointer-events: none;
+
+	.admin-bar & {
+		z-index: 9999;
+	}
 }
 
 @media (min-width: 603px) {

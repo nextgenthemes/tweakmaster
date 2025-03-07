@@ -23,7 +23,11 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\WPtweak;
 
-add_action('wp_handle_upload', __NAMESPACE__ . '\remove_exif');
+use Imagick;
+use ImagickPixel;
+use Exception;
+
+add_action( 'wp_handle_upload', __NAMESPACE__ . '\remove_exif' );
 /**
  * Handle an image upload by removing EXIF data.
  *
@@ -34,9 +38,9 @@ function remove_exif( array $upload ): array {
 	if ( 'image/jpeg' === $upload['type'] || 'image/jpg' === $upload['type'] ) {
 		$filename = $upload['file'];
 		// Check for Imagick.
-		if ( class_exists('Imagick') ) {
+		if ( class_exists( 'Imagick' ) ) {
 
-			$image = new \Imagick($filename);
+			$image = new Imagick( $filename );
 
 			if ( ! $image->valid() ) {
 				return $upload;
@@ -46,53 +50,53 @@ function remove_exif( array $upload ): array {
 				// Preserve image orientation.
 				$orientation = $image->getImageOrientation();
 				switch ( $orientation ) {
-					case \Imagick::ORIENTATION_BOTTOMRIGHT:
-						$image->rotateImage(new \ImagickPixel(), 180);
+					case Imagick::ORIENTATION_BOTTOMRIGHT:
+						$image->rotateImage( new ImagickPixel(), 180 );
 						break;
-					case \Imagick::ORIENTATION_RIGHTTOP:
-						$image->rotateImage(new \ImagickPixel(), 90);
+					case Imagick::ORIENTATION_RIGHTTOP:
+						$image->rotateImage( new ImagickPixel(), 90 );
 						break;
-					case \Imagick::ORIENTATION_LEFTBOTTOM:
-						$image->rotateImage(new \ImagickPixel(), -90);
+					case Imagick::ORIENTATION_LEFTBOTTOM:
+						$image->rotateImage( new ImagickPixel(), -90 );
 						break;
 				}
-				$image->setImageOrientation(\Imagick::ORIENTATION_TOPLEFT);
+				$image->setImageOrientation( Imagick::ORIENTATION_TOPLEFT );
 				$image->writeImage();
 				$image->clear();
 				$image->destroy();
-			} catch ( \Exception $e ) {
-				if ( defined('WP_DEBUG') && WP_DEBUG ) {
+			} catch ( Exception $e ) {
+				if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 					// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export
-					wp_trigger_error( __FUNCTION__, 'Unable to read EXIF data via Imagick for: ' . $filename . ' - ' . $e->getMessage());
+					wp_trigger_error( __FUNCTION__, 'Unable to read EXIF data via Imagick for: ' . $filename . ' - ' . $e->getMessage() );
 				}
 			}
-		} elseif ( function_exists('imagecreatefromjpeg') ) {
+		} elseif ( function_exists( 'imagecreatefromjpeg' ) ) {
 			// Fallback to GD.
-			$image = imagecreatefromjpeg($filename);
+			$image = imagecreatefromjpeg( $filename );
 
 			if ( $image ) {
 				try {
 					// Preserve image orientation.
-					$exif = exif_read_data($filename);
-					if ( ! empty($exif['Orientation']) ) {
+					$exif = exif_read_data( $filename );
+					if ( ! empty( $exif['Orientation'] ) ) {
 						switch ( $exif['Orientation'] ) {
 							case 3:
-								$image = imagerotate($image, 180, 0);
+								$image = imagerotate( $image, 180, 0 );
 								break;
 							case 6:
-								$image = imagerotate($image, -90, 0);
+								$image = imagerotate( $image, -90, 0 );
 								break;
 							case 8:
-								$image = imagerotate($image, 90, 0);
+								$image = imagerotate( $image, 90, 0 );
 								break;
 						}
 					}
-					imagejpeg($image, $filename, 100);
-					imagedestroy($image);
+					imagejpeg( $image, $filename, 100 );
+					imagedestroy( $image );
 				} catch ( \Exception $e ) {
-					if ( defined('WP_DEBUG') && WP_DEBUG ) {
+					if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 						// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export
-						wp_trigger_error( __FUNCTION__, 'Unable to read EXIF data via GD for: ' . $filename . ' - ' . $e->getMessage());
+						wp_trigger_error( __FUNCTION__, 'Unable to read EXIF data via GD for: ' . $filename . ' - ' . $e->getMessage() );
 					}
 				}
 			}
