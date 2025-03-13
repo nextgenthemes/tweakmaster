@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WPtweak;
+namespace Nextgenthemes\TweakMaster;
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init_public' );
 add_action( 'plugins_loaded', __NAMESPACE__ . '\init_admin' );

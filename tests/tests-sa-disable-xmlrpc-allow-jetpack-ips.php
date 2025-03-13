@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WPtweak;
+namespace Nextgenthemes\TweakMaster;
 
 use WP_UnitTestCase;
 

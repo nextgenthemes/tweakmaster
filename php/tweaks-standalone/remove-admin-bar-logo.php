@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Nextgenthemes\WPtweak
+ * @package   Nextgenthemes\TweakMaster
  * @link      https://nexgenthemes.com
  * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
@@ -17,7 +17,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WPtweak;
+namespace Nextgenthemes\TweakMaster;
 
 add_action( 'wp_before_admin_bar_render', __NAMESPACE__ . '\remove_admin_bar_wp_logo', 20 );
 function remove_admin_bar_wp_logo(): void {

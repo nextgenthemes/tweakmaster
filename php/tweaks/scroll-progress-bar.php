@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Nextgenthemes\WPtweak
+ * @package   Nextgenthemes\TweakMaster
  * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WPtweak;
+namespace Nextgenthemes\TweakMaster;
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scroll_assets' );
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\enqueue_scroll_assets' );

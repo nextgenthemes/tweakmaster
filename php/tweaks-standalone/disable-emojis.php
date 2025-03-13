@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Nextgenthemes\WPtweak
+ * @package   Nextgenthemes\TweakMaster
  * @link      https://nexgenthemes.com
  * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
@@ -22,7 +22,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WP_Tweak;
+namespace Nextgenthemes\TweakMaster;
 
 add_action( 'init', __NAMESPACE__ . '\disable_emojis' );
 /**

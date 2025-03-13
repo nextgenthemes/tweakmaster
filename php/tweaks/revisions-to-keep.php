@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Nextgenthemes\WPtweak
+ * @package   Nextgenthemes\TweakMaster
  * @link      https://nexgenthemes.com
  * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WPtweak;
+namespace Nextgenthemes\TweakMaster;
 
 add_filter( 'wp_revisions_to_keep', __NAMESPACE__ . '\limit_revisions', 15, 2 );
 add_filter( 'wp_revisions_to_keep', __NAMESPACE__ . '\limit_all_revisions', 20 );

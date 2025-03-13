@@ -19,7 +19,7 @@ function gen(): void {
 
 	$md = '';
 
-	foreach ( \Nextgenthemes\WPtweak\settings_data()->get_all() as $key => $setting ) {
+	foreach ( \Nextgenthemes\TweakMaster\settings_data()->get_all() as $key => $setting ) {
 
 		$md .= '* **' . $setting->label . '**';
 

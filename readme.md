@@ -8,7 +8,7 @@ If you just want just use the plugin its on [wordpress.org](https://wordpress.or
 
 # Advanced usage of standalone tweaks as mu-plugins
 
-If you do it this way, you probably should not use the Plugin at the same time. It wont work for tweaks that have settings that are mot then on/off switches. Each standalone tweak can be used as standalone plugin. Simple put the files you need inside your mu-plugins folder.
+If you do it this way, you probably should not use the Plugin at the same time. It won't work for tweaks that have settings that are not just on/off switches. Each standalone tweak can be used as mu-plugin. Simple put the files you need inside your mu-plugins folder.
 
 To do this you can simply copy `.php` files you like from [tweaks-standalone/](https://github.com/nextgenthemes/wp-tweak/tree/master/php/tweaks-standalone) to your mu-plugins folder. Github has a 'download file' icon on the top right when you open files.
 

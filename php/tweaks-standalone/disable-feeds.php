@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   Nextgenthemes\WPtweak
+ * @package   Nextgenthemes\TweakMaster
  * @link      https://nexgenthemes.com
  * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
@@ -17,7 +17,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\WPtweak;
+namespace Nextgenthemes\TweakMaster;
 
 add_action( 'do_feed_rdf', __NAMESPACE__ . '\kill_feed', 1 );
 add_action( 'do_feed_rss', __NAMESPACE__ . '\kill_feed', 1 );
