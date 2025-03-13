@@ -1,10 +1,10 @@
-=== TweakMaster ===
+=== Tweak Master ===
 Contributors: nico23
 Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
-Tested up to: 6.6
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0-beta2
+Stable tag: 1.0.0-beta3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'nextgenthemes/wp-tweak',
+        'name' => 'nextgenthemes/tweakmaster',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '8522a301a4b08d1eb6297bcfcf9d71ef80ef63d8',
+        'reference' => '28b5f920a601843a646cca46b2b85e2290d7abad',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -19,6 +19,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'nextgenthemes/tweakmaster' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '28b5f920a601843a646cca46b2b85e2290d7abad',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'nextgenthemes/wp-settings' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
@@ -28,15 +37,6 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'dev_requirement' => false,
-        ),
-        'nextgenthemes/wp-tweak' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '8522a301a4b08d1eb6297bcfcf9d71ef80ef63d8',
-            'type' => 'wordpress-plugin',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
             'dev_requirement' => false,
         ),
     ),
