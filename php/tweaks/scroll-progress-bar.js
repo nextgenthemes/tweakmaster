@@ -9,7 +9,7 @@ function handleScroll() {
 	const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 	const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 	const scrolled = ( winScroll / height ) * 100;
-	document.querySelector( '.wp-tweak-scroll__progress' ).style.width = scrolled + '%';
+	document.querySelector( '.tweakmaster-scroll__progress' ).style.width = scrolled + '%';
 }
 
 /**
