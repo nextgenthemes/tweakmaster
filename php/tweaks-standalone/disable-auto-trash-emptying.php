@@ -2,12 +2,12 @@
 /**
  * @package   Nextgenthemes\WPtweak
  * @link      https://nexgenthemes.com
- * @copyright 2024 Nicolas Jonas
+ * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
  *
  * @wordpress-plugin
- * Plugin Name:      Disable Contact Form 7 CSS
- * Description:      Sets wpcf7_load_css filter to false
+ * Plugin Name:      Disable Auto Trash Emptying
+ * Description:      By default WordPress removes items that are older then 30 days.
  * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
  * Version:          1.0.0
  * Author:           Nicolas Jonas

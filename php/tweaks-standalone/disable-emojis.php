@@ -2,7 +2,7 @@
 /**
  * @package   Nextgenthemes\WPtweak
  * @link      https://nexgenthemes.com
- * @copyright 2024 Nicolas Jonas
+ * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
  * Pretty much copy pasta from Ryan Hellyer, just added namespacing and strict types
  *

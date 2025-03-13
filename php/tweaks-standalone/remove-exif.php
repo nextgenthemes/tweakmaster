@@ -2,7 +2,7 @@
 /**
  * @package   Nextgenthemes\WPtweak
  * @link      https://nextgenthemes.com
- * @copyright 2024 Nicolas Jonas
+ * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
  * Copied from Bob, just Namespaced, and make use of wp_trigger_error
  *
@@ -93,7 +93,7 @@ function remove_exif( array $upload ): array {
 					}
 					imagejpeg( $image, $filename, 100 );
 					imagedestroy( $image );
-				} catch ( \Exception $e ) {
+				} catch ( Exception $e ) {
 					if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 						// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_var_export
 						wp_trigger_error( __FUNCTION__, 'Unable to read EXIF data via GD for: ' . $filename . ' - ' . $e->getMessage() );

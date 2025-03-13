@@ -2,8 +2,8 @@
 	position: fixed;
 	top: calc(var(--wp-tweak-admin-bar-space, 0px) + var(--wp--custom--navbar--height, 0px));
 	left: 0;
-	width: 100dvw;
 	z-index: 5;
+	width: 100dvw;
 	pointer-events: none;
 
 	.admin-bar & {

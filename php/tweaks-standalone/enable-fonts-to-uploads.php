@@ -2,7 +2,7 @@
 /**
  * @package   Nextgenthemes\WPtweak
  * @link      https://nexgenthemes.com
- * @copyright 2024 Nicolas Jonas
+ * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
  *
  * @copyright  2023 Peter Wilson
