@@ -61,8 +61,6 @@ jobs:
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
 
-      - name: Checkout Advanced Responsive Video Embedder
-
       - name: Run PHPUnit without code coverage
         if: (!contains(github.event.head_commit.message, '[cov]'))
         run: phpunit
