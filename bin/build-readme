@@ -1,0 +1,73 @@
+#!/bin/env php
+<?php
+
+declare(strict_types = 1);
+
+define( 'ABSPATH', dirname( __DIR__, 4 ) . '/wp/' );
+define( 'WPINC', 'wp-includes' );
+
+require ABSPATH . WPINC . '/functions.php';
+require ABSPATH . WPINC . '/post.php';
+
+require dirname( __DIR__ ) . '/vendor/nextgenthemes/wp-settings/includes/WP/SettingsData.php';
+require dirname( __DIR__ ) . '/vendor/nextgenthemes/wp-settings/includes/WP/SettingValidator.php';
+require dirname( __DIR__ ) . '/php/fn-settings.php';
+
+gen();
+
+function gen(): void {
+
+	$md = '';
+
+	foreach ( \Nextgenthemes\WPtweak\settings_data()->get_all() as $key => $setting ) {
+
+		$md .= '* **' . $setting->label . '**';
+
+		if ( ! empty( $setting->description ) ) {
+			$md .= '<br>' . PHP_EOL . $setting->description;
+		}
+
+		$md .= PHP_EOL;
+	}
+
+	$readme = file_get_contents( dirname( __DIR__ ) . '/readme-src.md' );
+	$readme = str_replace( '{ tweaks }', $md, $readme );
+	file_put_contents( dirname( __DIR__ ) . '/readme.txt', $readme );
+}
+
+function __( string $text ): string {
+	return $text;
+}
+
+function esc_html( string $text ): string {
+	return $text;
+}
+
+// phpcs:ignore
+function wp_kses( $content, $allowed_html, $allowed_protocols = array() ) {
+	return $content;
+}
+
+/**
+ * A mock for get_bloginfo()
+ *
+ * The real function is defined in wp-includes/general-template.php
+ *
+ * @param string $key
+ * @return string
+ */
+function get_bloginfo( string $key ): string {
+
+	switch ( $key ) {
+		case 'url':
+			return 'https://example.org';
+		case 'version':
+			return '1.0';
+		default:
+			die( 'not implemented in dummy' );
+	}
+}
+
+function wp_generator(): void {
+	echo 'WordPress/6.7.1; https://example.org';
+}

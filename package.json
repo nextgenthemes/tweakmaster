@@ -1,0 +1,10 @@
+{
+  "name": "@nextgenthemes/ngt-tweak",
+  "private": true,
+  "scripts": {
+    "build": "composer run build",
+    "test": "phpunit --testsuite tweakmaster"
+  },
+  "author": "Nicolas Jonas",
+  "license": "GPL-3.0"
+}

@@ -134,8 +134,8 @@ function general_settings(): array {
 			'label'       => __( 'Scroll progress color', 'wp-tweak' ),
 			'type'        => 'string',
 			'description' => sprintf(
-				'<a href="%s" target="_blank">And valid css will work. You can use this color picker!</a>, copy the 2nd field.',
-				'https://oklch.com/#46,0.0741,270,100'
+				'And valid css will work. You can use <a href="%s" target="_blank">this color picker!</a>.',
+				'https://oklch.com'
 			),
 			'default'     => 'var(--wp--preset--color--primary, oklch(45.44% 0.1924 270 / 78.17%))',
 		),
@@ -223,6 +223,13 @@ function security_settings(): array {
 		'disable-xmlrpc' => array(
 			'tab'         => 'security',
 			'label'       => __( 'Disable XML-RPC', 'wp-tweak' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'disable-xmlrpc-allow-jetpack-ips' => array(
+			'tab'         => 'security',
+			'label'       => __( 'Disable XML-RPC - allow Jetpack IPs', 'wp-tweak' ),
+			'description' => __( 'Allow XML-RPC only from Jetpack IPs', 'wp-tweak' ),
 			'type'        => 'boolean',
 			'default'     => false,
 		),

@@ -7,7 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit5aa486b2e15e5a77b655cb1dccf2d827
 {
     public static $files = array (
-        '47777597fbe681453e41ea4bf4ad9988' => __DIR__ . '/..' . '/nextgenthemes/wp-shared/includes/WP/init.php',
+        'b7fa01507ebc12cee9d707bcd605cd1e' => __DIR__ . '/..' . '/nextgenthemes/wp-settings/includes/WP/init.php',
     );
 
     public static $prefixLengthsPsr4 = array (

@@ -3,11 +3,9 @@
 	"description": "WP Tweak",
 	"type": "wordpress-plugin",
 	"require": {
-		"php": ">=7.4"
-	},
-	"require-dev": {
-		"nextgenthemes/wp-shared": "@dev",
-		"automattic/jetpack-autoloader": "3.1.3"
+		"php": ">=7.4",
+		"nextgenthemes/wp-settings": "@dev",
+		"automattic/jetpack-autoloader": "^v5.0.2"
 	},
 	"license": "GPL-3.0",
 	"authors": [
@@ -24,23 +22,11 @@
 			"php": "7.4"
 		}
 	},
-	"repositories": {
-		"nextgenthemes/wp-shared": {
-			"type": "path",
-			"url": "../../../../../../dev/composer-packages/wp-shared",
-			"options": {
-				"symlink": false
-			}
-		}
-	},
 	"scripts": {
 		"build": [
+			"./bin/build-readme",
+			"cp ../advanced-responsive-video-embedder/bin/install-wp-tests.sh ./bin/",
 			"@composer update"
-		],
-		"pre-update-cmd": [
-			"rsync --delete -av ../advanced-responsive-video-embedder/vendor/nextgenthemes/wp-shared ${HOME}/dev/composer-packages/",
-			"@composer --working-dir ${HOME}/dev/composer-packages/wp-shared config version $(php -r \"echo (new DateTime())->format('Y.m.d.H.i.s');\")"
-		],
-		"tests": []
+		]
 	}
 }

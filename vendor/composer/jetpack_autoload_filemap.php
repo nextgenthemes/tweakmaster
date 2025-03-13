@@ -6,8 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir   = dirname($vendorDir);
 
 return array(
-	'47777597fbe681453e41ea4bf4ad9988' => array(
-		'version' => '2025.02.18.17.30.07',
-		'path'    => $vendorDir . '/nextgenthemes/wp-shared/includes/WP/init.php'
+	'b7fa01507ebc12cee9d707bcd605cd1e' => array(
+		'version' => 'dev-master',
+		'path'    => $vendorDir . '/nextgenthemes/wp-settings/includes/WP/init.php'
 	),
 );
