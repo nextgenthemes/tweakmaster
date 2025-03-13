@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Dequeue jQuery Migrate
  * Description:      Dequeue jQuery Migrate from the jQuery script dependencies on the frontend.
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

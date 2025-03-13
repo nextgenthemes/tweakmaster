@@ -17,7 +17,7 @@ add_action( 'wp_body_open', __NAMESPACE__ . '\scroll_progress_bar' );
 add_action( 'admin_footer', __NAMESPACE__ . '\scroll_progress_bar' );
 
 function scroll_progress_bar(): void {
-	echo '<div class="wp-tweak-scroll"><div class="wp-tweak-scroll__progress"></div></div>';
+	echo '<div class="tweakmaster-scroll"><div class="tweakmaster-scroll__progress"></div></div>';
 }
 
 function enqueue_scroll_assets(): void {
@@ -33,10 +33,10 @@ function enqueue_scroll_assets(): void {
 	$progress_bg     = options()['scroll-progress-bar-progress-bg-color'];
 	$progress_height = options()['scroll-progress-bar-progress-height'];
 	$css             = '
-		.wp-tweak-scroll{
+		.tweakmaster-scroll{
 			background-color:' . esc_html( $bg ) . '
 		}
-		.wp-tweak-scroll__progress{
+		.tweakmaster-scroll__progress{
 			width:0%;
 			height:' . esc_html( $progress_height ) . ';
 			background-color:' . esc_html( $progress_bg ) . ';

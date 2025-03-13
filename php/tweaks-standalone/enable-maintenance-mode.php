@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Enable Maintenance Mode
  * Description:      Only users with delete_plugins can log and site frontend will be blocked
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com
@@ -48,7 +48,7 @@ function block_site_access(): void {
 			wp_kses(
 				sprintf(
 					// Translators: URL
-					__( 'Site is currently under maintenance. Please check back later. <a href="%s">Login</a>', 'wp-tweak' ),
+					__( 'Site is currently under maintenance. Please check back later. <a href="%s">Login</a>', 'tweakmaster' ),
 					esc_url( wp_login_url() )
 				),
 				array(
@@ -77,7 +77,7 @@ function add_maintenance_mode_notice( \WP_Admin_Bar $wp_admin_bar ): void {
 			'title'  => sprintf(
 				'<a style="color: red; font-weight: bold;" href="%s">%s</a>',
 				esc_url( admin_url( 'options-general.php?page=nextgenthemes_wptweak' ) ),
-				__( 'MAINTENANCE MODE ACTIVE', 'wp-tweak' )
+				__( 'MAINTENANCE MODE ACTIVE', 'tweakmaster' )
 			),
 			'meta'   => array(
 				'html'  => true,
@@ -105,10 +105,10 @@ function login_message( string $message ): string {
 			</p>
 		</div>',
 		'color: red; text-align: center; margin-bottom: .7em;',
-		esc_html__( 'Maintenance Mode Active!', 'wp-tweak' ),
+		esc_html__( 'Maintenance Mode Active!', 'tweakmaster' ),
 		sprintf(
 			// Translators: %s: user capability (delete_plugins).
-			esc_html__( 'Only users who can %s (typically administrators) are allowed to login to this site while the maintenance is active. Please check back later.', 'wp-tweak' ),
+			esc_html__( 'Only users who can %s (typically administrators) are allowed to login to this site while the maintenance is active. Please check back later.', 'tweakmaster' ),
 			sprintf( '<code>%s</code>', esc_html( CAPABILITY ) )
 		)
 	);

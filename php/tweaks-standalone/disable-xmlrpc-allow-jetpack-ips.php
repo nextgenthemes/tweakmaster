@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable XML-RPC - allow Jetpack IPs
  * Description:      Disable XML-RPC but allow it for Jetpack IPs
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com
@@ -77,12 +77,18 @@ function get_jetpack_ips(): array {
 
 // Check if the current request is from a Jetpack IP
 function is_jetpack_ip(): bool {
-	$client_ip      = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+
+	if ( empty( $_SERVER['REMOTE_ADDR'] ) ) {
+		$client_ip = '0.0.0.0';
+	} else {
+		$client_ip = wp_unslash( $_SERVER['REMOTE_ADDR'] );
+	}
+
 	$jetpack_ranges = get_jetpack_ips();
 
 	if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
 		// HTTP_X_FORWARDED_FOR can contain a comma-separated list; take the first IP
-		$forwarded_ips = explode( ',', $_SERVER['HTTP_X_FORWARDED_FOR'] );
+		$forwarded_ips = explode( ',', wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
 		$client_ip     = trim( $forwarded_ips[0] ); // First IP is typically the original client
 	}
 

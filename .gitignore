@@ -1,5 +1,8 @@
+vendor/
+!/vendor/
 node_modules/
 .ignore/
+.symlinks/
 ignore*
 
 # Numerous always-ignore extensions

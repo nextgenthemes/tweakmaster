@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name:      Fonts to Uploads
  * Description:      Move (Google) Fonts enabled in the Block Editor from wp-content/fonts to wp-content/uploads
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

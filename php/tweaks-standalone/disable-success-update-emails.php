@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable Success Update Emails
  * Description:      Disable Success Update Emails
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

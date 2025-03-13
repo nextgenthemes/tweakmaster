@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable Duplicate Post
  * Description:      Adds links to the posts overview screen to duplicate a post
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com
@@ -65,15 +65,17 @@ function duplicate_post(): void {
 	$post_id = absint( $_GET['post_id'] );
 
 	// Check the nonce specific to the post we are duplicating.
-	if ( ! isset( $_GET[ DP_NONCE_NAME ] ) || ! wp_verify_nonce( $_GET[ DP_NONCE_NAME ], 'wptweak_duplicate_post_' . $post_id ) ) {
+	if ( ! isset( $_GET[ DP_NONCE_NAME ] )
+		|| ! wp_verify_nonce( wp_unslash( $_GET[ DP_NONCE_NAME ] ), 'wptweak_duplicate_post_' . $post_id )
+	) {
 		// Display a message if the nonce is invalid, may it expired.
-		wp_die( 'The link you followed has expired, please try again.' );
+		wp_die( esc_html__( 'The link you followed has expired, please try again.', 'tweakmaster' ) );
 	}
 
 	$post = get_post( $post_id );
 
 	if ( ! $post ) {
-		wp_die( __( 'Post to duplicate not found.', 'wp-tweak' ) );
+		wp_die( esc_html__( 'Post to duplicate not found.', 'tweakmaster' ) );
 	}
 
 	$current_user = wp_get_current_user();

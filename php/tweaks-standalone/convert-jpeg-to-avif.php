@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Convert JPEG to AVIF on upload
  * Description:      Convert JPEG to AVIF on upload
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

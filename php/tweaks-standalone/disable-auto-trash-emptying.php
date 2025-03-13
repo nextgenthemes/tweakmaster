@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable Auto Trash Emptying
  * Description:      By default WordPress removes items that are older then 30 days.
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

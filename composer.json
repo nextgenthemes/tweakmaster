@@ -1,11 +1,11 @@
 {
-	"name": "nextgenthemes/wp-tweak",
-	"description": "WP Tweak",
+	"name": "nextgenthemes/tweakmaster",
+	"description": "Tweak Master - A collection or performance, privacy, security and other tweaks..",
 	"type": "wordpress-plugin",
 	"require": {
 		"php": ">=7.4",
 		"nextgenthemes/wp-settings": "@dev",
-		"automattic/jetpack-autoloader": "^v5.0.2"
+		"automattic/jetpack-autoloader": "^v5.0.3"
 	},
 	"license": "GPL-3.0",
 	"authors": [

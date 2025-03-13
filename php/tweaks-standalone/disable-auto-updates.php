@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable Contact Form 7 auto paragraph creation
  * Description:      Sets wpcf7_autop_or_not filter to false
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

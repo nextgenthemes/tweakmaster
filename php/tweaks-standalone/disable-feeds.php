@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable Feeds
  * Description:      Disables RSS, Atom and RDF feeds
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com
@@ -25,5 +25,5 @@ add_action( 'do_feed_rss2', __NAMESPACE__ . '\kill_feed', 1 );
 add_action( 'do_feed_atom', __NAMESPACE__ . '\kill_feed', 1 );
 
 function kill_rss(): void {
-	wp_die( esc_html__( 'Feeds are disabled.', 'wp-tweak' ) );
+	wp_die( esc_html__( 'Feeds are disabled.', 'tweakmaster' ) );
 }

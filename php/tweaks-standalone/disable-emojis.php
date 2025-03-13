@@ -12,7 +12,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:      Disable Emojis (GDPR friendly)
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Description:      Disable Emojis (GDPR friendly)
  * Version:          1.7.6
  * Author:           Nicolas Jonas

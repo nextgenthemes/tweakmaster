@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disallow File Edits
  * Description:      Sets DISALLOW_FILE_EDIT constant to true. Does only work if the constant is not already defined, usually in wp-config.php
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com

@@ -35,7 +35,7 @@ function enqueue_admin_bar_greeting_module(): void {
 function add_greeting_data_attribute( array $attributes ): array {
 
 	if ( 'wptweak-set-admin-bar-greeting-js-module' === $attributes['id'] ) {
-		$attributes['data-wp-tweak-greeting'] = trim( options()['admin-bar-greeting'] ) . ' ';
+		$attributes['data-tweakmaster-greeting'] = trim( options()['admin-bar-greeting'] ) . ' ';
 	}
 
 	return $attributes;

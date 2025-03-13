@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:      Disable REST API
  * Description:      Disables the REST API
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com
@@ -25,7 +25,7 @@ function disable_rest_api(): \WP_Error {
 	return new \WP_Error(
 		'rest_disabled',
 		// Translators: The WordPress REST API has been disabled.
-		__( 'The WordPress REST API has been disabled.', 'wp-tweak' ),
+		__( 'The WordPress REST API has been disabled.', 'tweakmaster' ),
 		array(
 			'status' => rest_authorization_required_code(),
 		)

@@ -11,7 +11,7 @@
  * @wordpress-plugin
  * Plugin Name:      Clean Upload Filenames
  * Description:      Sanitize media filenames to remove non-latin special characters and accents.
- * Plugin URI:       https://nexgenthemes.com/plugins/wp-tweak/
+ * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
  * Author URI:       https://nexgenthemes.com
