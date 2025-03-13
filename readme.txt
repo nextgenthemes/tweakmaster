@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.0-beta1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -93,5 +93,5 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
-= 2025-03-13 - 1.0.0 =
+= 2025-03-xx - 1.0.0-beta1 =
 * Initial release.
