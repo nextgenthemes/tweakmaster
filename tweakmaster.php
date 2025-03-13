@@ -9,7 +9,7 @@
  * Plugin Name:       Tweak Master
  * Description:       A collection or performance, privacy, security and other tweaks.. Minimalistic lightweight plugin.
  * Plugin URI:        https://nexgenthemes.com/plugins/wp-tweak/
- * Version:           1.0.0-beta1
+ * Version:           1.0.0-beta2
  * Requires at least: 6.6
  * Author:            Nicolas Jonas
  * Author URI:        https://nexgenthemes.com
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const VERSION       = '1.0.0-beta1';
+const VERSION       = '1.0.0-beta2';
 const PLUGIN_FILE   = __FILE__;
 const PLUGIN_DIR    = __DIR__;
 const TWEAKS_DIR    = __DIR__ . '/php/tweaks';
