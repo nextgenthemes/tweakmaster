@@ -6,7 +6,7 @@
  * @license   GPL-3.0
  *
  * @wordpress-plugin
- * Plugin Name:       Tweak Master
+ * Plugin Name:       TweakMaster
  * Description:       A collection or performance, privacy, security and other tweaks.. Minimalistic lightweight plugin.
  * Plugin URI:        https://nexgenthemes.com/plugins/tweakmaster/
  * Version:           1.0.0-beta3

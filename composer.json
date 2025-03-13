@@ -1,6 +1,6 @@
 {
 	"name": "nextgenthemes/tweakmaster",
-	"description": "Tweak Master - A collection or performance, privacy, security and other tweaks..",
+	"description": "TweakMaster - A collection or performance, privacy, security and other tweaks..",
 	"type": "wordpress-plugin",
 	"require": {
 		"php": ">=7.4",

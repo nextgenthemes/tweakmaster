@@ -1,4 +1,4 @@
-=== Tweak Master ===
+=== TweakMaster ===
 Contributors: nico23
 Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6

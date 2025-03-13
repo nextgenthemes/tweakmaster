@@ -20,8 +20,8 @@ function settings_instance(): Settings {
 				'base_path'           => PLUGIN_DIR,
 				'plugin_file'         => PLUGIN_FILE,
 				'settings'            => settings_data(),
-				'menu_title'          => esc_html__( 'Tweak Master', 'tweakmaster' ),
-				'settings_page_title' => esc_html__( 'Tweak Master', 'tweakmaster' ),
+				'menu_title'          => esc_html__( 'TweakMaster', 'tweakmaster' ),
+				'settings_page_title' => esc_html__( 'TweakMaster', 'tweakmaster' ),
 				'tabs'                => array(
 					'general'     => array( 'title' => __( 'General', 'tweakmaster' ) ),
 					'privacy'     => array( 'title' => __( 'Privacy', 'tweakmaster' ) ),
