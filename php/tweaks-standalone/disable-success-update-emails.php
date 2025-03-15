@@ -31,10 +31,12 @@ add_filter( 'auto_core_update_send_email', __NAMESPACE__ . '\disable_core_auto_u
  * @return bool Whether to send an email.
  */
 function disable_core_auto_update_emails_on_success( bool $send, string $type ): bool {
-	if ( ! empty( $type ) && 'success' === $type ) {
+
+	if ( 'success' === $type ) {
 		return false;
 	}
-	return true;
+
+	return $send;
 }
 
 add_filter( 'auto_plugin_update_send_email', __NAMESPACE__ . '\disable_auto_update_emails_on_success', 10, 2 );
@@ -50,10 +52,10 @@ add_filter( 'auto_theme_update_send_email', __NAMESPACE__ . '\disable_auto_updat
 function disable_auto_update_emails_on_success( bool $enabled, array $update_results ): bool {
 
 	foreach ( $update_results as $update_result ) {
-		if ( true !== $update_result->result ) {
-			return true;
+		if ( $update_result->result ) {
+			return false;
 		}
 	}
 
-	return false;
+	return $enabled;
 }
