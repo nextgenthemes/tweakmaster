@@ -1,20 +1,20 @@
 {
 	"name": "nextgenthemes/tweakmaster",
-	"description": "TweakMaster - A collection or performance, privacy, security and other tweaks..",
 	"type": "wordpress-plugin",
-	"require": {
-		"php": ">=7.4"
-	},
-	"require-dev": {
-		"nextgenthemes/wp-settings": "@dev",
-		"automattic/jetpack-autoloader": "^v5.0.3"
-	},
 	"license": "GPL-3.0",
+	"description": "TweakMaster - A collection or performance, privacy, security and other tweaks..",
 	"authors": [
 		{
 			"name": "Nicolas Jonas"
 		}
 	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"automattic/jetpack-autoloader": "^v5.0.3",
+		"nextgenthemes/wp-settings": "@dev"
+	},
 	"config": {
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true

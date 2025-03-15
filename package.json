@@ -1,9 +1,9 @@
 {
-  "name": "@nextgenthemes/ngt-tweak",
+  "name": "@nextgenthemes/tweakmaster",
   "private": true,
   "scripts": {
     "build": "composer run build",
-    "test": "phpunit --testsuite tweakmaster"
+    "test": "phpunit"
   },
   "author": "Nicolas Jonas",
   "license": "GPL-3.0"
