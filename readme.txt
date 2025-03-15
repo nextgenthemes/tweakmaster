@@ -45,6 +45,8 @@ And valid css will work. You can use <a href="https://oklch.com" target="_blank"
 * **Disable Success Update Emails**
 * **Remove Admin Bar Logo**
 * **Remove Asset Attributes**
+* **Disable Non Production Emails**<br>
+If WP_ENV (Trellis) or wp_get_environment_type is not production, emails sending is mocked.
 * **Set user agent**<br>
 WP really hates privacy and sends this <code>WordPress/1.0; https://example.org</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>
@@ -93,5 +95,9 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2025-03-15 - 1.0.1-beta1 =
+* New: Disable non production email tweak.
+
 = 2025-03-xx - 1.0.0-beta1 =
 * Initial release.
