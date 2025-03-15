@@ -32,5 +32,9 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2025-03-15 - 1.0.1-beta1 =
+* New: Disable non production email tweak.
+
 = 2025-03-xx - 1.0.0-beta1 =
 * Initial release.

@@ -199,6 +199,13 @@ function general_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
+		'disable-non-production-emails' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Disable Non Production Emails', 'tweakmaster' ),
+			'description' => __( 'If WP_ENV (Trellis) or wp_get_environment_type is not production, emails sending is mocked.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 	);
 }
 
