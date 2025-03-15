@@ -2,7 +2,7 @@ const d = document;
 const qs = d.querySelector.bind( d );
 const link = qs( '#wp-admin-bar-my-account > .ab-item' );
 const displayName = qs( '#wp-admin-bar-my-account > .ab-item > .display-name' );
-const greeting = qs( 'script[data-tweakmaster-greeting]' )?.dataset.tweakmasterGreeting;
+const greeting = qs( '[data-tweakmaster-greeting]' )?.dataset.tweakmasterGreeting;
 const avatar = qs( '#wp-admin-bar-my-account > .ab-item > .avatar' );
 
 if ( ! link || ! displayName || ! greeting ) {
