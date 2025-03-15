@@ -52,9 +52,9 @@ function revisions_tab_info(): void {
 	?>
 	<div data-wp-bind--hidden="!context.activeTabs.revisions">
 		<p>
-			<?php esc_html_e( '-1 = Unlimited revisions', 'advanced-responsive-video-embedder' ); ?><br>
-			<?php esc_html_e( '0 = Disable revisions', 'advanced-responsive-video-embedder' ); ?><br>
-			<?php esc_html_e( 'Positive integer = Number of revisions', 'advanced-responsive-video-embedder' ); ?>
+			<?php echo wp_kses( __( '<code>-1</code> = Unlimited revisions', 'tweakmaster' ), [ 'code' => [] ] ); ?><br>
+			<?php echo wp_kses( __( '<code>0</code> = Disable revisions', 'tweakmaster' ), [ 'code' => [] ] ); ?><br>
+			<?php echo wp_kses( __( 'Positive integer = Number of revisions', 'tweakmaster' ), [ 'code' => [] ] ); ?>
 		</p>
 	</div>
 	<?php

@@ -189,7 +189,8 @@ function general_settings(): array {
 		),
 		'remove-admin-bar-logo' => array(
 			'tab'         => 'general',
-			'label'       => __( 'Remove Admin Bar Logo', 'tweakmaster' ),
+			'label'       => __( 'Remove Admin Bar WordPress Logo', 'tweakmaster' ),
+			'description' => __( 'Requires a hard refresh of the page to take effect.', 'tweakmaster' ),
 			'type'        => 'boolean',
 			'default'     => false,
 		),
@@ -264,7 +265,7 @@ function performance_settings(): array {
 		'enable-script-optimizer' => array(
 			'tab'         => 'performance',
 			'label'       => __( 'Script Optimizer', 'tweakmaster' ),
-			'description' => __( 'Optimize script loading by moving them into the head and adding defer attribute. This may break your site. Use at your own risk!', 'tweakmaster' ),
+			'description' => __( 'Optimize script loading by moving them into the <code>head</code> and adding <code>defer</code> attribute. This may break your site. Use at your own risk!', 'tweakmaster' ),
 			'type'        => 'boolean',
 			'default'     => false,
 		),
@@ -364,7 +365,7 @@ function plugins_settings(): array {
 			'default'     => false,
 			'option'      => true,
 			'label'       => __( 'Disable Contact Form 7 CSS', 'tweakmaster' ),
-			'description' => __( 'Sets <code>wpcf7_load_css</code> filter to false', 'tweakmaster' ),
+			'description' => __( 'Sets <code>wpcf7_load_css</code> filter to <code>false</code>', 'tweakmaster' ),
 			'type'        => 'boolean',
 		),
 		'disable-cf7-autop' => array(
@@ -372,7 +373,7 @@ function plugins_settings(): array {
 			'default'     => false,
 			'option'      => true,
 			'label'       => __( 'Disable Contact Form 7 Autop', 'tweakmaster' ),
-			'description' => __( 'Sets <code>wpcf7_autop_or_not</code> filter to false', 'tweakmaster' ),
+			'description' => __( 'Sets <code>wpcf7_autop_or_not</code> filter to <code>false</code>', 'tweakmaster' ),
 			'type'        => 'boolean',
 		),
 		'enable-jetpack-offline-mode' => array(
