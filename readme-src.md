@@ -34,6 +34,8 @@ If you have questions on adding a more complex tweak please feel free to ask.
 == Changelog ==
 
 = 2025-03-xx - 1.0.1-beta2 =
+* Improved: Tweak descriptions.
+* Fix: Admin Bar Greeting tweak.
 * Fix: Link to GH readme.
 * Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
 
