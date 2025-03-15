@@ -21,6 +21,8 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
+use WP_Error;
+
 const JETPACK_IPS = array(
 	'122.248.245.244/32',
 	'54.217.201.243/32',
@@ -59,17 +61,15 @@ function get_jetpack_ips(): array {
 	$ips           = get_transient( $transient_key );
 
 	if ( false === $ips ) {
-		$response = wp_safe_remote_get( 'https://jetpack.com/ips-v4.txt' );
+		$response = remote_get_body( 'https://jetpack.com/ips-v4.txt' );
 
 		if ( is_wp_error( $response ) ) {
 			wp_trigger_error( __FUNCTION__, $response->get_error_message() );
 			$ips = JETPACK_IPS;
-		} elseif ( 200 === wp_remote_retrieve_response_code( $response ) ) {
-			$ips = explode( "\n", trim( wp_remote_retrieve_body( $response ) ) );
+		} else {
+			$ips = explode( "\n", trim( $response ) );
 			$ips = array_filter( $ips ); // Remove empty lines
 			set_transient( $transient_key, $ips, WEEK_IN_SECONDS ); // Cache for 1 week
-		} else {
-			$ips = JETPACK_IPS;
 		}
 	}
 	return $ips;
@@ -98,4 +98,49 @@ function is_jetpack_ip(): bool {
 		}
 	}
 	return false;
+}
+
+/**
+ * Retrieves the body content from a remote URL.
+ *
+ * @param string $url The URL of the remote resource.
+ * @param array $args Optional. Additional arguments for wp_safe_remote_get.
+ * @return string|WP_Error The response body content from the remote URL, or a WP_Error on failure.
+ */
+function remote_get_body( string $url, array $args = array() ) {
+
+	$response      = wp_safe_remote_get( $url, $args );
+	$response_code = wp_remote_retrieve_response_code( $response );
+
+	if ( is_wp_error( $response ) ) {
+		return $response;
+	}
+
+	if ( 200 !== $response_code ) {
+
+		return new WP_Error(
+			$response_code,
+			sprintf(
+				// Translators: 1 URL 2 HTTP response code.
+				__( 'url: %1$s Status code 200 expected but was %2$s.', 'tweakmaster' ),
+				$url,
+				$response_code
+			)
+		);
+	}
+
+	$response = wp_remote_retrieve_body( $response );
+
+	if ( '' === $response ) {
+		return new WP_Error(
+			'empty-body',
+			sprintf(
+				// Translators: URL.
+				__( 'url: %s Empty Body.', 'tweakmaster' ),
+				$url
+			)
+		);
+	}
+
+	return $response;
 }
