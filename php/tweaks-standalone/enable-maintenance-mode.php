@@ -76,7 +76,7 @@ function add_maintenance_mode_notice( \WP_Admin_Bar $wp_admin_bar ): void {
 			'id'     => 'maintenance_mode',
 			'title'  => sprintf(
 				'<a style="color: red; font-weight: bold;" href="%s">%s</a>',
-				esc_url( admin_url( 'options-general.php?page=nextgenthemes_wptweak' ) ),
+				esc_url( admin_url( 'options-general.php?page=nextgenthemes_tweakmaster' ) ),
 				__( 'MAINTENANCE MODE ACTIVE', 'tweakmaster' )
 			),
 			'meta'   => array(

@@ -19,8 +19,8 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
-const DP_ACTION_NAME = 'wptweak_duplicate_post';
-const DP_NONCE_NAME  = 'wptweak_duplicate_post_nonce';
+const DP_ACTION_NAME = 'tweakmaster_duplicate_post';
+const DP_NONCE_NAME  = 'tweakmaster_duplicate_post_nonce';
 
 add_action( 'admin_action_' . DP_ACTION_NAME, __NAMESPACE__ . '\duplicate_post' );
 
@@ -47,11 +47,11 @@ function duplicate_post_link( array $actions, \WP_Post $post ): array {
 			),
 			'admin.php'
 		),
-		'wptweak_duplicate_post_' . $post->ID,
+		'tweakmaster_duplicate_post_' . $post->ID,
 		DP_NONCE_NAME
 	);
 
-	$actions['wptweak_duplicate'] = '<a href="' . $url . '" title="Duplicate item" rel="permalink">Duplicate</a>';
+	$actions['tweakmaster_duplicate'] = '<a href="' . $url . '" title="Duplicate item" rel="permalink">Duplicate</a>';
 
 	return $actions;
 }
@@ -66,7 +66,7 @@ function duplicate_post(): void {
 
 	// Check the nonce specific to the post we are duplicating.
 	if ( ! isset( $_GET[ DP_NONCE_NAME ] )
-		|| ! wp_verify_nonce( wp_unslash( $_GET[ DP_NONCE_NAME ] ), 'wptweak_duplicate_post_' . $post_id )
+		|| ! wp_verify_nonce( wp_unslash( $_GET[ DP_NONCE_NAME ] ), 'tweakmaster_duplicate_post_' . $post_id )
 	) {
 		// Display a message if the nonce is invalid, may it expired.
 		wp_die( esc_html__( 'The link you followed has expired, please try again.', 'tweakmaster' ) );

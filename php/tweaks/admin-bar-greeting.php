@@ -25,7 +25,7 @@ function set_admin_bar_greeting(): void {
 function enqueue_admin_bar_greeting_module(): void {
 
 	wp_enqueue_script_module(
-		'wptweak-set-admin-bar-greeting',
+		'tweakmaster-set-admin-bar-greeting',
 		plugins_url( 'php/tweaks/set-admin-bar-greeting.js', PLUGIN_FILE ),
 		array(),
 		VERSION
@@ -34,7 +34,7 @@ function enqueue_admin_bar_greeting_module(): void {
 
 function add_greeting_data_attribute( array $attributes ): array {
 
-	if ( 'wptweak-set-admin-bar-greeting-js-module' === $attributes['id'] ) {
+	if ( 'tweakmaster-set-admin-bar-greeting-js-module' === $attributes['id'] ) {
 		$attributes['data-tweakmaster-greeting'] = trim( options()['admin-bar-greeting'] ) . ' ';
 	}
 

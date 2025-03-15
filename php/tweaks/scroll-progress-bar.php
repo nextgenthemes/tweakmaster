@@ -23,7 +23,7 @@ function scroll_progress_bar(): void {
 function enqueue_scroll_assets(): void {
 
 	wp_enqueue_style(
-		'wptweak-scroll-progress-bar',
+		'tweakmaster-scroll-progress-bar',
 		plugins_url( 'php/tweaks/scroll-progress-bar.css', PLUGIN_FILE ),
 		array(),
 		VERSION
@@ -44,10 +44,10 @@ function enqueue_scroll_assets(): void {
 
 	$css = str_replace( array( "\n", "\r", "\t" ), '', $css );
 
-	wp_add_inline_style( 'wptweak-scroll-progress-bar', wp_strip_all_tags( $css ) );
+	wp_add_inline_style( 'tweakmaster-scroll-progress-bar', wp_strip_all_tags( $css ) );
 
 	wp_enqueue_script_module(
-		'wptweak-scroll-progress-bar',
+		'tweakmaster-scroll-progress-bar',
 		plugins_url( 'php/tweaks/scroll-progress-bar.js', PLUGIN_FILE ),
 		array(),
 		VERSION

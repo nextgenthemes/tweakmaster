@@ -24,7 +24,7 @@ This plugins handles tweaks in a minimalistic way. Only files that contains twea
 
 Unlike WP Code's snippet database that is filled with low code quality tweaks where some do not even work at all and spam this plugin only contains high quality tweaks. If something is missing please add it.
 
-It is very easy to contribute to the plugin. Check out the [Github Readme](https://github.com/nextgenthemes/tweakmaster/readme.md).
+It is very easy to contribute to the plugin. Check out the [Github Readme](https://github.com/nextgenthemes/tweakmaster/blob/master/readme.md).
 
 If you have questions on adding a more complex tweak please feel free to ask.
 
@@ -32,6 +32,10 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2025-03-xx - 1.0.1-beta2 =
+* Fix: Link to GH readme.
+* Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
 
 = 2025-03-15 - 1.0.1-beta1 =
 * New: Disable non production email tweak.

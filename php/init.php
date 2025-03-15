@@ -44,7 +44,7 @@ function require_file_if_option_is_set( string $key ): void {
 }
 
 function init_admin(): void {
-	add_action( 'nextgenthemes/wptweak/admin/settings/content', __NAMESPACE__ . '\revisions_tab_info' );
+	add_action( 'nextgenthemes/tweakmaster/admin/settings/content', __NAMESPACE__ . '\revisions_tab_info' );
 }
 
 function revisions_tab_info(): void {
