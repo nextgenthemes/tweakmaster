@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.1-beta1
+Stable tag: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -43,10 +43,12 @@ And valid css will work. You can use <a href="https://oklch.com" target="_blank"
 * **Disable Email Login**
 * **Disable REST API**
 * **Disable Success Update Emails**
-* **Remove Admin Bar Logo**
+* **Remove Admin Bar WordPress Logo**<br>
+Requires a hard refresh of the page to take effect.
 * **Remove Asset Attributes**
 * **Disable Non Production Emails**<br>
 If WP_ENV (Trellis) or wp_get_environment_type is not production, emails sending is mocked.
+* **Remove REST API links**
 * **Set user agent**<br>
 WP really hates privacy and sends this <code>WordPress/1.0; https://example.org</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>
@@ -71,13 +73,13 @@ Remove <code>WordPress/6.7.1; https://example.org</code> from html head
 * **Dequeue jQuery Migrate**<br>
 Dequeue jQuery Migrate from the jQuery script dependencies on the frontend. This is used to help devs debug from old versions of jQuery. You really do not need this on a production site.
 * **Script Optimizer**<br>
-Optimize script loading by moving them into the head and adding defer attribute. This may break your site. Use at your own risk!
+Optimize script loading by moving them into the <code>head</code> and adding <code>defer</code> attribute. This may break your site. Use at your own risk!
 * **Enable relative URLs**<br>
-Enable relative URLs in the frontend. This may break your site. Use at your own risk!
+Enable relative URLs on the frontend. This may break your site. Use at your own risk!
 * **Disable Contact Form 7 CSS**<br>
-Sets <code>wpcf7_load_css</code> filter to false
+Sets <code>wpcf7_load_css</code> filter to <code>false</code>
 * **Disable Contact Form 7 Autop**<br>
-Sets <code>wpcf7_autop_or_not</code> filter to false
+Sets <code>wpcf7_autop_or_not</code> filter to <code>false</code>
 * **Enable Jetpack offline mode**
 * **Enable maintenance mode**
 * **Enable duplicate post**
@@ -87,7 +89,7 @@ Sets <code>wpcf7_autop_or_not</code> filter to false
 
 Unlike WP Code's snippet database that is filled with low code quality tweaks where some do not even work at all and spam this plugin only contains high quality tweaks. If something is missing please add it.
 
-It is very easy to contribute to the plugin. Check out the [Github Readme](https://github.com/nextgenthemes/tweakmaster/readme.md).
+It is very easy to contribute to the plugin. Check out the [Github Readme](https://github.com/nextgenthemes/tweakmaster/blob/master/readme.md).
 
 If you have questions on adding a more complex tweak please feel free to ask.
 
@@ -95,6 +97,12 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2025-03-xx - 1.0.1-beta2 =
+* Improved: Tweak descriptions.
+* Fix: Admin Bar Greeting tweak.
+* Fix: Link to GH readme.
+* Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
 
 = 2025-03-15 - 1.0.1-beta1 =
 * New: Disable non production email tweak.
