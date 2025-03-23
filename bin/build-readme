@@ -30,8 +30,9 @@ function gen(): void {
 		$md .= PHP_EOL;
 	}
 
-	$readme = file_get_contents( dirname( __DIR__ ) . '/readme-src.md' );
-	$readme = str_replace( '{ tweaks }', $md, $readme );
+	$readme  = file_get_contents( dirname( __DIR__ ) . '/readme-src.md' );
+	$readme  = str_replace( '{ tweaks }', $md, $readme );
+
 	file_put_contents( dirname( __DIR__ ) . '/readme.txt', $readme );
 }
 
