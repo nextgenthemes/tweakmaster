@@ -8,11 +8,11 @@
  * @wordpress-plugin
  * Plugin Name:       TweakMaster
  * Description:       A collection or performance, privacy, security and other tweaks.. Minimalistic lightweight plugin.
- * Plugin URI:        https://nexgenthemes.com/plugins/tweakmaster/
+ * Plugin URI:        https://nextgenthemes.com/plugins/tweakmaster/
  * Version:           1.0.1-beta1
  * Requires at least: 6.6
  * Author:            Nicolas Jonas
- * Author URI:        https://nexgenthemes.com
+ * Author URI:        https://nextgenthemes.com
  * License:           GPLv3
  */
 
