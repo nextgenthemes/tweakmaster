@@ -207,6 +207,12 @@ function general_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
+		'remove-rest-api-links' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove REST API links', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 	);
 }
 
@@ -272,7 +278,7 @@ function performance_settings(): array {
 		'enable-relative-urls' => array(
 			'tab'         => 'performance',
 			'label'       => __( 'Enable relative URLs', 'tweakmaster' ),
-			'description' => __( 'Enable relative URLs in the frontend. This may break your site. Use at your own risk!', 'tweakmaster' ),
+			'description' => __( 'Enable relative URLs on the frontend. This may break your site. Use at your own risk!', 'tweakmaster' ),
 			'type'        => 'boolean',
 			'default'     => false,
 		),
