@@ -51,13 +51,13 @@ function optimize_script( string $handle, ?_WP_Dependency $data ): void {
 	}
 
 	$async                   = false;
-	$exclude_handles         = (array) apply_filters( 'nextgenthemes/script_optimizer/exclude_handles', [] );
-	$exclude_handle_prefixes = (array) apply_filters( 'nextgenthemes/script_optimizer/exclude_handle_prefixes', [] );
-	$exclude_urls            = (array) apply_filters( 'nextgenthemes/script_optimizer/exclude_urls', [] );
-	$exclude_url_parts       = (array) apply_filters( 'nextgenthemes/script_optimizer/exclude_url_parts', [] );
-	$async_handles           = (array) apply_filters( 'nextgenthemes/script_optimizer/async_handles', [] );
-	$async_handle_prefixes   = (array) apply_filters( 'nextgenthemes/script_optimizer/async_handle_prefixes', [] );
-	$async_url_parts         = (array) apply_filters( 'nextgenthemes/script_optimizer/async_url_parts', [] );
+	$exclude_handles         = (array) apply_filters( 'tweakmaster/script_optimizer/exclude_handles', [] );
+	$exclude_handle_prefixes = (array) apply_filters( 'tweakmaster/script_optimizer/exclude_handle_prefixes', [] );
+	$exclude_urls            = (array) apply_filters( 'tweakmaster/script_optimizer/exclude_urls', [] );
+	$exclude_url_parts       = (array) apply_filters( 'tweakmaster/script_optimizer/exclude_url_parts', [] );
+	$async_handles           = (array) apply_filters( 'tweakmaster/script_optimizer/async_handles', [] );
+	$async_handle_prefixes   = (array) apply_filters( 'tweakmaster/script_optimizer/async_handle_prefixes', [] );
+	$async_url_parts         = (array) apply_filters( 'tweakmaster/script_optimizer/async_url_parts', [] );
 
 	/**
 	 * Identify Excluded
