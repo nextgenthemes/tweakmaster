@@ -157,12 +157,12 @@ function general_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
-		'disable-auto-updates' => array(
-			'tab'         => 'general',
-			'label'       => __( 'Disable Auto Updates', 'tweakmaster' ),
-			'type'        => 'boolean',
-			'default'     => false,
-		),
+		// 'disable-auto-updates' => array(
+		//  'tab'         => 'general',
+		//  'label'       => __( 'Disable Auto Updates', 'tweakmaster' ),
+		//  'type'        => 'boolean',
+		//  'default'     => false,
+		// ),
 		'disable-comments' => array(
 			'tab'         => 'general',
 			'label'       => __( 'Disable Comments', 'tweakmaster' ),
