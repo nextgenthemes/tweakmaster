@@ -98,6 +98,10 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
+= 2025-03-29 - 1.0.3
+* Improved: sanitize, validate correctly, fix prefixes ...
+* Removed update disable tweak, not allowed on wp.org?
+
 = 2025-03-xx - 1.0.1-beta2 =
 * Improved: Tweak descriptions.
 * Fix: Admin Bar Greeting tweak.
