@@ -29,7 +29,6 @@
 			"./bin/build-readme",
 			"cp ../advanced-responsive-video-embedder/bin/install-wp-tests.sh ./bin/",
 			"cp ../advanced-responsive-video-embedder/tests/phpunit-debug-helpers.php ./tests/",
-			"cp ../advanced-responsive-video-embedder/.gitattributes ./",
 			"cp ../advanced-responsive-video-embedder/.gitignore ./",
 			"@composer update"
 		]

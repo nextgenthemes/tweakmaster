@@ -8,6 +8,7 @@
 /tsconfig.json export-ignore
 /tests         export-ignore
 /readme        export-ignore
+/php/tweaks-standalone-not-wp-org export-ignore
 
 build/* -diff
 
