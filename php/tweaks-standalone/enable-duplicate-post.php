@@ -62,17 +62,19 @@ function duplicate_post(): void {
 		wp_die( 'No post id set for the duplicate action.' );
 	}
 
-	$post_id = absint( $_GET['post_id'] );
-
 	// Check the nonce specific to the post we are duplicating.
 	if ( ! isset( $_GET[ DP_NONCE_NAME ] )
-		|| ! wp_verify_nonce( wp_unslash( $_GET[ DP_NONCE_NAME ] ), 'tweakmaster_duplicate_post_' . $post_id )
+		|| ! wp_verify_nonce(
+			sanitize_key( wp_unslash( $_GET[ DP_NONCE_NAME ] ) ),
+			'tweakmaster_duplicate_post_' . (int) sanitize_key( wp_unslash( $_GET['post_id'] ) )
+		)
 	) {
 		// Display a message if the nonce is invalid, may it expired.
 		wp_die( esc_html__( 'The link you followed has expired, please try again.', 'tweakmaster' ) );
 	}
 
-	$post = get_post( $post_id );
+	$post_id = (int) sanitize_key( wp_unslash( $_GET['post_id'] ) );
+	$post    = get_post( $post_id );
 
 	if ( ! $post ) {
 		wp_die( esc_html__( 'Post to duplicate not found.', 'tweakmaster' ) );

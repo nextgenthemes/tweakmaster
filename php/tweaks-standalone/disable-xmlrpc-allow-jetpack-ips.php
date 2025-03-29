@@ -81,15 +81,20 @@ function is_jetpack_ip(): bool {
 	if ( empty( $_SERVER['REMOTE_ADDR'] ) ) {
 		$client_ip = '0.0.0.0';
 	} else {
-		$client_ip = wp_unslash( $_SERVER['REMOTE_ADDR'] );
+		$client_ip = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
 	}
 
 	$jetpack_ranges = get_jetpack_ips();
 
 	if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
 		// HTTP_X_FORWARDED_FOR can contain a comma-separated list; take the first IP
-		$forwarded_ips = explode( ',', wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
+		$forwarded_ips = explode( ',', sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) );
 		$client_ip     = trim( $forwarded_ips[0] ); // First IP is typically the original client
+	}
+
+	if ( ! valid_ip( $client_ip ) ) {
+		wp_trigger_error( __FUNCTION__, 'Invalid Client IP: ' . $client_ip );
+		return false;
 	}
 
 	foreach ( $jetpack_ranges as $range ) {
@@ -98,6 +103,10 @@ function is_jetpack_ip(): bool {
 		}
 	}
 	return false;
+}
+
+function valid_ip( string $ip ): bool {
+	return filter_var( $ip, FILTER_VALIDATE_IP ) !== false;
 }
 
 /**
