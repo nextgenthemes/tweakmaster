@@ -57,7 +57,7 @@ function is_ip_in_range( string $ip, string $cidr ): bool {
 
 // Fetch and cache Jetpack IP ranges
 function get_jetpack_ips(): array {
-	$transient_key = 'wp_tweak_jetpack_ips';
+	$transient_key = 'tweakmaster_jetpack_ips';
 	$ips           = get_transient( $transient_key );
 
 	if ( false === $ips ) {
