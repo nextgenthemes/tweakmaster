@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Nextgenthemes\ARVE\phpUnit;
+namespace Nextgenthemes\TweakMaster\phpUnit;
 
 $kint = getenv( 'KINT_DEBUG_PLUGIN_FILE' );
 
