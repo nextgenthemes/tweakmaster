@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\init_public', 9 );
+add_action( 'init', __NAMESPACE__ . '\init_public', 9 );
 add_action( 'admin_init', __NAMESPACE__ . '\init_admin', 9 );
 
 function init_public(): void {
