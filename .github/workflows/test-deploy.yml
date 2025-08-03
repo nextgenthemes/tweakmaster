@@ -86,13 +86,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: advanced-responsive-video-embedder
 
       - name: Deploy to WP.org
         uses: nextgenthemes/action-wordpress-plugin-deploy@master
         with:
-          workdir: advanced-responsive-video-embedder
           version: ${{github.ref_name}}
           svn_user: ${{ secrets.SVN_USERNAME }}
           svn_pass: ${{ secrets.SVN_PASSWORD }}
