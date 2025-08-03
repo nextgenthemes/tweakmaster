@@ -1,0 +1,14 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"siteOptions": {
+		"blogname": "Tweakmaster Testing Playground",
+		"blogdescription": "Test Tweakmaster",
+		"permalink_structure": "/%postname%/"
+	},
+	"landingPage": "\/wp-admin\/post.php?options-general.php?page=nextgenthemes_tweakmaster",
+	"login": true
+}
