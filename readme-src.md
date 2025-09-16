@@ -33,6 +33,10 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
+= 2025-09-17 - 1.1.0
+* New: Admin email check interval setting.
+* New: Admin footer text setting.
+
 = 2025-08-03 - 1.0.6
 * Improved: sanitize, validate correctly, fix prefixes ...
 * Removed update disable tweak, not allowed on wp.org?

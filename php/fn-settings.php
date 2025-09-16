@@ -213,6 +213,20 @@ function general_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
+		'admin-email-check-interval' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Admin email check interval', 'tweakmaster' ),
+			'type'        => 'integer',
+			'default'     => 15552000,
+			'description' => __( 'Time in seconds to display email verification message on login. Set to 0 to disable. Default is 15552000 (6 months).', 'tweakmaster' ),
+		),
+		'admin-footer-text' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Admin footer text', 'tweakmaster' ),
+			'description' => __( 'a href links are allowed. Use "default" for default text.', 'tweakmaster' ),
+			'type'        => 'string',
+			'default'     => 'default',
+		),
 	);
 }
 

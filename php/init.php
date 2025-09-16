@@ -34,6 +34,8 @@ function init_public(): void {
 	require_file_if_option_is_set( 'admin-bar-greeting' );
 	require_file_if_option_is_set( 'scroll-progress-bar' );
 	require_file_if_option_is_set( 'user-agent' );
+	require_file_if_option_is_set( 'admin-footer-text' );
+	require_file_if_option_is_set( 'admin-email-check-interval' );
 }
 
 function require_file_if_option_is_set( string $key ): void {
