@@ -48,6 +48,10 @@ Requires a hard refresh of the page to take effect.
 * **Disable Non Production Emails**<br>
 If WP_ENV (Trellis) or wp_get_environment_type is not production, emails sending is mocked.
 * **Remove REST API links**
+* **Admin email check interval**<br>
+Time in seconds to display email verification message on login. Set to 0 to disable. Default is 15552000 (6 months).
+* **Admin footer text**<br>
+a href links are allowed. Use "default" for default text.
 * **Set user agent**<br>
 WP really hates privacy and sends this <code>WordPress/1.0; https://example.org</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>
@@ -96,6 +100,10 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2025-09-17 - 1.1.0
+* New: Admin email check interval setting.
+* New: Admin footer text setting.
 
 = 2025-08-03 - 1.0.6
 * Improved: sanitize, validate correctly, fix prefixes ...
