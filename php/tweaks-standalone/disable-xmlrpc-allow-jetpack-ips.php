@@ -21,8 +21,6 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
-use WP_Error;
-
 const JETPACK_IPS = array(
 	'122.248.245.244/32',
 	'54.217.201.243/32',
@@ -48,6 +46,7 @@ function filter_xmlrpc_enabled(): bool {
 // Function to check if an IP is in a CIDR range
 function is_ip_in_range( string $ip, string $cidr ): bool {
 	list($subnet, $bits) = explode( '/', $cidr );
+	$bits                = (int) $bits;
 	$ip                  = ip2long( $ip );
 	$subnet              = ip2long( $subnet );
 	$mask                = -1 << ( 32 - $bits );
@@ -55,7 +54,11 @@ function is_ip_in_range( string $ip, string $cidr ): bool {
 	return ( $ip & $mask ) === $subnet;
 }
 
-// Fetch and cache Jetpack IP ranges
+/**
+ * Fetch and cache Jetpack IP ranges
+ *
+ * @return array<string> Array of IP ranges.
+ */
 function get_jetpack_ips(): array {
 	$transient_key = 'tweakmaster_jetpack_ips';
 	$ips           = get_transient( $transient_key );
@@ -112,9 +115,9 @@ function valid_ip( string $ip ): bool {
 /**
  * Retrieves the body content from a remote URL.
  *
- * @param string $url The URL of the remote resource.
- * @param array $args Optional. Additional arguments for wp_safe_remote_get.
- * @return string|WP_Error The response body content from the remote URL, or a WP_Error on failure.
+ * @param  string               $url  The URL of the remote resource.
+ * @param  array<string, mixed> $args Optional. Additional arguments for wp_safe_remote_get.
+ * @return string|\WP_Error           The response body content from the remote URL, or a WP_Error on failure.
  */
 function remote_get_body( string $url, array $args = array() ) {
 
@@ -127,7 +130,7 @@ function remote_get_body( string $url, array $args = array() ) {
 
 	if ( 200 !== $response_code ) {
 
-		return new WP_Error(
+		return new \WP_Error(
 			$response_code,
 			sprintf(
 				// Translators: 1 URL 2 HTTP response code.
@@ -141,7 +144,7 @@ function remote_get_body( string $url, array $args = array() ) {
 	$response = wp_remote_retrieve_body( $response );
 
 	if ( '' === $response ) {
-		return new WP_Error(
+		return new \WP_Error(
 			'empty-body',
 			sprintf(
 				// Translators: URL.

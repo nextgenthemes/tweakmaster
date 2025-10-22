@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
-add_filter( 'wp_editor_set_quality', __NAMESPACE__ . 'set_image_quality', 10, 2 );
+add_filter( 'wp_editor_set_quality', __NAMESPACE__ . '\set_image_quality', 10, 2 );
 /**
  * Sets image quality based on MIME type.
  *

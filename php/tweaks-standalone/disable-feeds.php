@@ -19,10 +19,10 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
-add_action( 'do_feed_rdf', __NAMESPACE__ . '\kill_feed', 1 );
-add_action( 'do_feed_rss', __NAMESPACE__ . '\kill_feed', 1 );
-add_action( 'do_feed_rss2', __NAMESPACE__ . '\kill_feed', 1 );
-add_action( 'do_feed_atom', __NAMESPACE__ . '\kill_feed', 1 );
+add_action( 'do_feed_rdf', __NAMESPACE__ . '\kill_feed', 1 ); // @phpstan-ignore-line
+add_action( 'do_feed_rss', __NAMESPACE__ . '\kill_feed', 1 ); // @phpstan-ignore-line
+add_action( 'do_feed_rss2', __NAMESPACE__ . '\kill_feed', 1 ); // @phpstan-ignore-line
+add_action( 'do_feed_atom', __NAMESPACE__ . '\kill_feed', 1 ); // @phpstan-ignore-line
 
 function kill_rss(): void {
 	wp_die( esc_html__( 'Feeds are disabled.', 'tweakmaster' ) );

@@ -39,10 +39,16 @@ function settings_instance(): Settings {
 	return $instance;
 }
 
+/**
+ * @return array<string, mixed>
+ */
 function options(): array {
 	return settings_instance()->get_options();
 }
 
+/**
+ * @return array<string, mixed>
+ */
 function default_options(): array {
 	return settings_instance()->get_options_defaults();
 }
@@ -62,6 +68,9 @@ function settings_data(): SettingsData {
 	return new SettingsData( $settings );
 }
 
+/**
+ * @return array<string, array<string, mixed>>
+ */
 function general_settings(): array {
 	return array(
 		'remove-asset-ver-parameter' => array(
@@ -230,6 +239,9 @@ function general_settings(): array {
 	);
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function security_settings(): array {
 
 	ob_start();
@@ -273,6 +285,9 @@ function security_settings(): array {
 	);
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function performance_settings(): array {
 	return array(
 		'dequeue-jquery-migrate' => array(
@@ -299,6 +314,9 @@ function performance_settings(): array {
 	);
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function media_settings(): array {
 	return array(
 		'convert-jpeg-to-avif' => array(
@@ -339,6 +357,9 @@ function media_settings(): array {
 	);
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function privacy_settings(): array {
 
 	// https://github.com/WordPress/WordPress/blob/c10dbc8434d14371366e413e510cb0d54b4f367b/wp-includes/class-wp-http.php#L206
@@ -377,6 +398,9 @@ function privacy_settings(): array {
 	);
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function plugins_settings(): array {
 
 	return array(
@@ -406,6 +430,9 @@ function plugins_settings(): array {
 	);
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function revision_settings(): array {
 
 	$settings = array();
@@ -433,6 +460,9 @@ function revision_settings(): array {
 	return $settings;
 }
 
+/**
+ * @return array<string, array<string, string|int|bool|float>>
+ */
 function tools_settings(): array {
 
 	return array(
@@ -458,6 +488,9 @@ function option_is_set( string $key ): bool {
 	return options()[ $key ] !== $default_option;
 }
 
+/**
+ * @param array<string> $options_keys
+ */
 function any_option_is_set( array $options_keys ): bool {
 
 	foreach ( $options_keys as $key ) {
@@ -471,6 +504,8 @@ function any_option_is_set( array $options_keys ): bool {
 
 /**
  * Get post types which support revisions.
+ *
+ * @return array<string, string>
  */
 function get_revision_post_types(): array {
 

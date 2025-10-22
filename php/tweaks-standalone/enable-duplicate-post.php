@@ -27,9 +27,9 @@ add_action( 'admin_action_' . DP_ACTION_NAME, __NAMESPACE__ . '\duplicate_post' 
 add_filter( 'post_row_actions', __NAMESPACE__ . '\duplicate_post_link', 10, 2 );
 add_filter( 'page_row_actions', __NAMESPACE__ . '\duplicate_post_link', 10, 2 );
 /**
- * @param array   $actions The actions added as links to the admin.
- * @param WP_Post $post The post object.
- *
+ * @param  array<int|string, string> $actions The actions added as links to the admin.
+ * @param  \WP_Post                  $post    The post object.
+ * @return array<int|string, string>          The actions added as links to the admin.
  */
 function duplicate_post_link( array $actions, \WP_Post $post ): array {
 

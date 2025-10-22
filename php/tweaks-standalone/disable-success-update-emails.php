@@ -25,10 +25,7 @@ add_filter( 'auto_core_update_send_email', __NAMESPACE__ . '\disable_core_auto_u
  *
  * @param bool   $send        Whether to send an email.
  * @param string $type        The type of email to send.
- * @param object $core_update The update offer.
- * @param array  $result      The result of the update.
- *
- * @return bool Whether to send an email.
+ * @return bool               Whether to send an email.
  */
 function disable_core_auto_update_emails_on_success( bool $send, string $type ): bool {
 
@@ -44,10 +41,9 @@ add_filter( 'auto_theme_update_send_email', __NAMESPACE__ . '\disable_auto_updat
 /**
  * Disable auto-update email notifications if all of the updates were successful.
  *
- * @param bool   $enabled        Whether to send an email.
- * @param array  $update_results The result of the update.
- *
- * @return bool Whether to send an email.
+ * @param bool           $enabled        Whether to send an email.
+ * @param array<object>  $update_results The result of the update.
+ * @return bool                          Whether to send an email.
  */
 function disable_auto_update_emails_on_success( bool $enabled, array $update_results ): bool {
 

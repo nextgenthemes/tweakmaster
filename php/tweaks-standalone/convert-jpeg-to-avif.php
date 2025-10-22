@@ -21,7 +21,12 @@ namespace Nextgenthemes\TweakMaster;
 
 add_filter( 'image_editor_output_format', __NAMESPACE__ . '\convert_jpeg_to_avif' );
 
-// Output AVIFs for uploaded JPEGs
+/**
+ * Output AVIFs for uploaded JPEGs
+ *
+ * @param array<string, string> $formats
+ * @return array<string, string>
+ */
 function convert_jpeg_to_avif( array $formats ): array {
 	$formats['image/jpeg'] = 'image/avif';
 	return $formats;

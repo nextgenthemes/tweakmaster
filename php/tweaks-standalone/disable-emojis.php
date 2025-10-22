@@ -43,22 +43,19 @@ function disable_emojis(): void {
 /**
  * Filter function used to remove the tinymce emoji plugin.
  *
- * @return   array             Difference between the two arrays
+ * @param  array<string> $plugins Array of plugins
+ * @return array<string>          Array of plugins (wpemoji removed)
  */
 function disable_emojis_tinymce( array $plugins ): array {
-	if ( is_array( $plugins ) ) {
-		return array_diff( $plugins, array( 'wpemoji' ) );
-	}
-
-	return array();
+	return array_diff( $plugins, array( 'wpemoji' ) );
 }
 
 /**
  * Remove emoji CDN hostname from DNS prefetching hints.
  *
- * @param  array  $urls          URLs to print for resource hints.
- * @param  string $relation_type The relation type the URLs are printed for.
- * @return array                 Difference between the two arrays.
+ * @param  array<string> $urls          URLs to print for resource hints.
+ * @param  string        $relation_type The relation type the URLs are printed for.
+ * @return array<string>                 Difference between the two arrays.
  */
 function disable_emojis_remove_dns_prefetch( array $urls, string $relation_type ): array {
 

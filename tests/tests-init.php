@@ -9,9 +9,13 @@ use Nextgenthemes\WP\SettingValidator;
 
 class Tests_Init extends WP_UnitTestCase {
 
+	/**
+	 * @return array<array-key,array<string, string>>
+	 */
 	public function data_setting_keys_from_files(): array {
 
-		$files = glob( TWEAKS_DIR_SA . '/*.php' );
+		$output = [];
+		$files  = glob( TWEAKS_DIR_SA . '/*.php' );
 
 		foreach ( $files as $file ) {
 
@@ -33,8 +37,12 @@ class Tests_Init extends WP_UnitTestCase {
 		$this->assertEquals( 'boolean', $setting->type );
 	}
 
+	/**
+	 * @return array<array-key,array<string, string>>
+	 */
 	public function data_standalone_setting_keys(): array {
 
+		$output   = [];
 		$settings = settings_data();
 		$settings->remove( 'scroll-progress-bar' ); // uses options api
 

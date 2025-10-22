@@ -24,6 +24,9 @@ namespace Nextgenthemes\TweakMaster;
 
 bootstrap();
 
+
+
+
 /**
  * Bootstrap the plugin.
  */
@@ -36,7 +39,18 @@ function bootstrap(): void {
 	 * This runs late on the `init` hook to allow time for plugins to register
 	 * custom upload directory file handlers.
 	 */
-	add_action( 'init', __NAMESPACE__ . '\\cached_wp_get_upload_dir', 20 );
+	add_action( 'init', __NAMESPACE__ . '\\cached_wp_get_upload_dir_primer', 20 );
+}
+
+/**
+ * Prime the uploads directory cache. Exists to phpstan does not complain about hook function having a return value.
+ *
+ * This runs late on the `init` hook to allow time for plugins to register
+ * custom upload directory file handlers.
+ *
+ */
+function cached_wp_get_upload_dir_primer(): void {
+	cached_wp_get_upload_dir();
 }
 
 /**
@@ -51,7 +65,16 @@ function bootstrap(): void {
  *
  * @see https://github.com/pantheon-systems/pantheon-mu-plugin/blob/main/inc/fonts.php for inspiration.
  *
- * @return array Result of wp_get_upload_dir().
+ * Returns the cached upload directory information.
+ *
+ * This function stores the uploads directory in a static variable to prevent
+ * potential infinite loops that could occur if an extender includes
+ * `add_filter( 'upload_dir', 'wp_get_font_dir' );` in their code base.
+ *
+ * Without a primed cache, `wp_get_upload_dir()` would trigger a call to
+ * `wp_get_font_dir()` which would trigger a call to `wp_get_upload_dir()`.
+ *
+ * @return array<string, string|false>
  */
 function cached_wp_get_upload_dir(): array {
 	static $cached = null;
@@ -69,8 +92,8 @@ function cached_wp_get_upload_dir(): array {
  * Relocated files uploaded by the Font Library from `wp-content/fonts/` to a
  * sub-directory of the uploads folder.
  *
- * @param array $font_directory The default in which to store fonts.
- * @return array The modified fonts directory.
+ * @param  array<string, string|false> $font_directory The default in which to store fonts.
+ * @return array<string, string|false>                 The modified fonts directory.
  */
 function filter_default_font_directory( array $font_directory ): array {
 	$upload_dir = cached_wp_get_upload_dir();

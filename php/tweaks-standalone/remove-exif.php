@@ -4,7 +4,7 @@
  * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
  * @license   GPL-3.0
- * Copied from Bob, just Namespaced, and make use of wp_trigger_error
+ * Copied from Bob, Namespaced, fixed add_filter instead of add_action and make use of wp_trigger_error
  *
  * @copyright 2024 Bob Matyas
  * https://wordpress.org/plugins/exif-remover/
@@ -27,12 +27,12 @@ use Imagick;
 use ImagickPixel;
 use Exception;
 
-add_action( 'wp_handle_upload', __NAMESPACE__ . '\remove_exif' );
+add_filter( 'wp_handle_upload', __NAMESPACE__ . '\remove_exif' );
 /**
  * Handle an image upload by removing EXIF data.
  *
- * @param array $upload A single array element containing the details of the uploaded file.
- * @return array The processed upload array.
+ * @param  array<string, mixed> $upload A single array element containing the details of the uploaded file.
+ * @return array<string, mixed>         The processed upload array.
  */
 function remove_exif( array $upload ): array {
 	if ( 'image/jpeg' === $upload['type'] || 'image/jpg' === $upload['type'] ) {

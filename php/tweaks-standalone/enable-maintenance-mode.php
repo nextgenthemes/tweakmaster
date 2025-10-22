@@ -26,19 +26,17 @@ add_action( 'admin_bar_menu', __NAMESPACE__ . '\add_maintenance_mode_notice', 10
 add_filter( 'login_message', __NAMESPACE__ . '\login_message' );
 add_action( 'wp_authenticate_user', __NAMESPACE__ . '\check_user_capability' );
 
-function check_user_capability( \WP_User $user ): \WP_User {
+function check_user_capability( \WP_User $user ): void {
 
-	if ( ! $user || ! user_can( $user, CAPABILITY ) ) {
+	if ( ! user_can( $user, CAPABILITY ) ) {
 
 		// Deny the user
 		wp_clear_auth_cookie();
-		wp_set_auth_cookie( '', false );
+		wp_set_auth_cookie( $user->ID, false );
 		do_action( 'wp_logout' );
 		wp_safe_redirect( wp_login_url() );
 		exit;
 	}
-
-	return $user;
 }
 
 function block_site_access(): void {
@@ -67,7 +65,7 @@ function block_site_access(): void {
  *
  * This is only shown to users who are not logged in or do not have the CAPABILITY.
  *
- * @param WP_Admin_Bar $wp_admin_bar The admin bar object.
+ * @param \WP_Admin_Bar $wp_admin_bar The admin bar object.
  */
 function add_maintenance_mode_notice( \WP_Admin_Bar $wp_admin_bar ): void {
 

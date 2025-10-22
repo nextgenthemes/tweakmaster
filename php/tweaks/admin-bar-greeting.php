@@ -18,7 +18,7 @@ function set_admin_bar_greeting(): void {
 	if ( is_admin_bar_showing() ) {
 		add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_admin_bar_greeting_module' );
 		add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\enqueue_admin_bar_greeting_module' );
-		add_action( 'wp_script_attributes', __NAMESPACE__ . '\add_greeting_data_attribute' );
+		add_filter( 'wp_script_attributes', __NAMESPACE__ . '\add_greeting_data_attribute' );
 	}
 }
 
@@ -32,6 +32,11 @@ function enqueue_admin_bar_greeting_module(): void {
 	);
 }
 
+/**
+ * @param array<string, string> $attributes HTML tag attributes
+ *
+ * @return array<string, string>            HTML tag attributes (modified)
+ */
 function add_greeting_data_attribute( array $attributes ): array {
 
 	if ( 'tweakmaster-admin-bar-greeting-js-module' === $attributes['id'] ) {
