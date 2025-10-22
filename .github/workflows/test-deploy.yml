@@ -108,7 +108,7 @@ jobs:
       - name: git archive .zip
         run: git archive -o /tmp/tweakmaster-${{ github.ref_name }}.zip --prefix=tweakmaster/ ${{ github.ref_name }}
 
-      - name: Copy to arve.zip for permalink to latest version
+      - name: Copy to tweakmaster.zip for permalink to latest version
         run: cp /tmp/tweakmaster-${{ github.ref_name }}.zip /tmp/tweakmaster.zip 
 
       - name: Create Release
