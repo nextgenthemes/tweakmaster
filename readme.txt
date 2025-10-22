@@ -101,10 +101,6 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
-= 2025-10-22 - 1.1.1
-* Fix: Fix jQuery migrate tweak.
-* Improved: Code quality. PHPStan is awesome!
-
 = 2025-09-17 - 1.1.0
 * New: Admin email check interval setting.
 * New: Admin footer text setting.
