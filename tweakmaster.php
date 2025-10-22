@@ -9,7 +9,7 @@
  * Plugin Name:       TweakMaster
  * Description:       A collection or performance, privacy, security and other tweaks.. Minimalistic lightweight plugin.
  * Plugin URI:        https://nextgenthemes.com/plugins/tweakmaster/
- * Version:           1.1.0
+ * Version:           1.1.1
  * Requires at least: 6.6
  * Author:            Nicolas Jonas
  * Author URI:        https://nextgenthemes.com
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const VERSION       = '1.1.0';
+const VERSION       = '1.1.1';
 const PLUGIN_FILE   = __FILE__;
 const PLUGIN_DIR    = __DIR__;
 const TWEAKS_DIR    = __DIR__ . '/php/tweaks';
