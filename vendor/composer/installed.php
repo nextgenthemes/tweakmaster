@@ -3,7 +3,7 @@
         'name' => 'nextgenthemes/tweakmaster',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '0a437e33c6baf52e7fe6422de0c8fda7c38b683d',
+        'reference' => '87d39693e534411459a277643edde15c6b661a42',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'nextgenthemes/tweakmaster' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '0a437e33c6baf52e7fe6422de0c8fda7c38b683d',
+            'reference' => '87d39693e534411459a277643edde15c6b661a42',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

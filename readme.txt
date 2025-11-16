@@ -11,6 +11,31 @@ Donate link: https://nextgenthemes.com/donate
 
 A collection of performance, privacy, security, and other tweaks. Minimalistic lightweight plugin.
 
+== Changelog ==
+
+= 2025-11-xx - 1.1.1
+* New: Enable full admin bar menu tweak.
+
+= 2025-09-17 - 1.1.0
+* New: Admin email check interval setting.
+* New: Admin footer text setting.
+
+= 2025-08-03 - 1.0.6
+* Improved: sanitize, validate correctly, fix prefixes ...
+* Removed update disable tweak, not allowed on wp.org?
+
+= 2025-03-xx - 1.0.1-beta2 =
+* Improved: Tweak descriptions.
+* Fix: Admin Bar Greeting tweak.
+* Fix: Link to GH readme.
+* Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
+
+= 2025-03-15 - 1.0.1-beta1 =
+* New: Disable non production email tweak.
+
+= 2025-03-xx - 1.0.0-beta1 =
+* Initial release.
+
 == Description ==
 WP Tweak is a lightweight and minimalistic WordPress plugin designed to enhance your website with a curated set of tweaks. It focuses on improving performance, bolstering privacy, strengthening security, and adding other useful optimizations—all without unnecessary bloat. Perfect for users who want a simple yet effective solution to fine-tune their WordPress experience.
 
@@ -99,24 +124,4 @@ If you have questions on adding a more complex tweak please feel free to ask.
 == Screenshots ==
 (Maybe later)
 
-== Changelog ==
 
-= 2025-09-17 - 1.1.0
-* New: Admin email check interval setting.
-* New: Admin footer text setting.
-
-= 2025-08-03 - 1.0.6
-* Improved: sanitize, validate correctly, fix prefixes ...
-* Removed update disable tweak, not allowed on wp.org?
-
-= 2025-03-xx - 1.0.1-beta2 =
-* Improved: Tweak descriptions.
-* Fix: Admin Bar Greeting tweak.
-* Fix: Link to GH readme.
-* Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
-
-= 2025-03-15 - 1.0.1-beta1 =
-* New: Disable non production email tweak.
-
-= 2025-03-xx - 1.0.0-beta1 =
-* Initial release.

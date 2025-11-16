@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5aa486b2e15e5a77b655cb1dccf2d827
+class ComposerStaticInitdc4a6d1b65d3b499ca79a68a51744651
 {
     public static $files = array (
         'b7fa01507ebc12cee9d707bcd605cd1e' => __DIR__ . '/..' . '/nextgenthemes/wp-settings/includes/WP/init.php',
@@ -36,9 +36,9 @@ class ComposerStaticInit5aa486b2e15e5a77b655cb1dccf2d827
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5aa486b2e15e5a77b655cb1dccf2d827::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5aa486b2e15e5a77b655cb1dccf2d827::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit5aa486b2e15e5a77b655cb1dccf2d827::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdc4a6d1b65d3b499ca79a68a51744651::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdc4a6d1b65d3b499ca79a68a51744651::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitdc4a6d1b65d3b499ca79a68a51744651::$classMap;
 
         }, null, ClassLoader::class);
     }
