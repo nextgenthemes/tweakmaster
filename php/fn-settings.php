@@ -222,6 +222,27 @@ function general_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
+		'remove-rsd-link' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove RSD link', 'tweakmaster' ),
+			'description' => __( 'Removes Really Simple Discovery link tag from head.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-shortlink' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove shortlink', 'tweakmaster' ),
+			'description' => __( 'Removes shortlink link tag from head and shortlink HTTP header.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-wlwmanifest-link' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove wlwmanifest link', 'tweakmaster' ),
+			'description' => __( 'Removes Windows Live Writer manifest link tag from head.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 		'admin-email-check-interval' => array(
 			'tab'         => 'general',
 			'label'       => __( 'Admin email check interval', 'tweakmaster' ),
