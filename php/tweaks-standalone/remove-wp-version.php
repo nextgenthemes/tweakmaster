@@ -3,15 +3,16 @@
  * @package   Nextgenthemes\TweakMaster
  * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
- * @license   GPL-3.0
+ * @license   GPL-3.0-only
  *
  * @wordpress-plugin
  * Plugin Name:     Remove WP Version
  * Description:     Removes Remove WP Version from head and feeds
+ * Plugin URI:       https://nextgenthemes.com/plugins/tweakmaster/
  * Author:          Nicolas Jonas
  * Author URI:      https://nextgenthemes.com
  * Version:         1.0.0
- * License:         GPLv3
+ * License:         GPL-3.0-only
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
  */
 

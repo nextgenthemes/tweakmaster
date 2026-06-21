@@ -1,18 +1,18 @@
 <?php
 /**
  * @package   Nextgenthemes\TweakMaster
- * @link      https://nexgenthemes.com
+ * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
- * @license   GPL-3.0
+ * @license   GPL-3.0-only
  *
  * @wordpress-plugin
  * Plugin Name:      Enable Maintenance Mode
  * Description:      Only users with delete_plugins can log and site frontend will be blocked
- * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
+ * Plugin URI:       https://nextgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
- * Author URI:       https://nexgenthemes.com
- * License:          GPLv3
+ * Author URI:       https://nextgenthemes.com
+ * License:          GPL-3.0-only
  */
 
 declare(strict_types = 1);

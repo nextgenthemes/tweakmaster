@@ -1,18 +1,18 @@
 <?php
 /**
  * @package   Nextgenthemes\TweakMaster
- * @link      https://nexgenthemes.com
+ * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
- * @license   GPL-3.0
+ * @license   GPL-3.0-only
  *
  * @wordpress-plugin
  * Plugin Name:      Disable non production emails
  * Description:      If WP_ENV (Trellis) or wp_get_environment_type is not production, emails sending is mocked
- * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
+ * Plugin URI:       https://nextgenthemes.com/plugins/tweakmaster/
  * Version:          1.0.0
  * Author:           Nicolas Jonas
- * Author URI:       https://nexgenthemes.com
- * License:          GPLv3
+ * Author URI:       https://nextgenthemes.com
+ * License:          GPL-3.0-only
  */
 
 declare(strict_types = 1);

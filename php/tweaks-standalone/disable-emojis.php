@@ -1,9 +1,9 @@
 <?php
 /**
  * @package   Nextgenthemes\TweakMaster
- * @link      https://nexgenthemes.com
+ * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
- * @license   GPL-3.0
+ * @license   GPL-3.0-only
  * Pretty much copy pasta from Ryan Hellyer, just added namespacing and strict types
  *
  * @copyright 2023 Ryan Hellyer
@@ -12,12 +12,12 @@
  *
  * @wordpress-plugin
  * Plugin Name:      Disable Emojis (GDPR friendly)
- * Plugin URI:       https://nexgenthemes.com/plugins/tweakmaster/
+ * Plugin URI:       https://nextgenthemes.com/plugins/tweakmaster/
  * Description:      Disable Emojis (GDPR friendly)
  * Version:          1.7.6
  * Author:           Nicolas Jonas
- * Author URI:       https://nexgenthemes.com
- * License:          GPLv3
+ * Author URI:       https://nextgenthemes.com
+ * License:          GPL-3.0-only
  */
 
 declare(strict_types = 1);

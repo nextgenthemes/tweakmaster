@@ -3,7 +3,7 @@
  * @package   Nextgenthemes\TweakMaster
  * @link      https://nextgenthemes.com
  * @copyright 2025 Nicolas Jonas
- * @license   GPL-3.0
+ * @license   GPL-3.0-only
  * Copied from Bob, Namespaced, fixed add_filter instead of add_action and make use of wp_trigger_error
  *
  * @copyright 2024 Bob Matyas
@@ -12,10 +12,11 @@
  * @wordpress-plugin
  * Plugin Name:     EXIF Remover
  * Description:     Removes EXIF data from image uploads
+ * Plugin URI:       https://nextgenthemes.com/plugins/tweakmaster/
  * Author:          Nicolas Jonas
  * Author URI:      https://nextgenthemes.com
  * Version:         1.0.0
- * License:         GPLv3
+ * License:         GPL-3.0-only
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
  */
 
