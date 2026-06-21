@@ -1,10 +1,11 @@
 includes:
-    - ../advanced-responsive-video-embedder/phpstan.neon
+	- ../../phpstan.neon
 parameters:
-	excludePaths:
-		analyseAndScan:
-			- php/tweaks-standalone/enable-relative-urls.php
 	paths:
 		- tweakmaster.php
 		- php/
 		- tests/
+	excludePaths:
+		analyseAndScan:
+			- php/tweaks-standalone/enable-relative-urls.php
+
