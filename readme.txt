@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -13,7 +13,13 @@ A collection of performance, privacy, security, and other tweaks. Minimalistic l
 
 == Changelog ==
 
-= 2025-11-xx - 1.1.1
+= 2026-06-22 - 1.1.2
+* New: Remove RSD link, shortlink, and wlwmanifest link tweaks.
+* New: Enable Jetpack offline mode tweak.
+* New: Enable maintenance mode tweak.
+* Improved: Coding style and tab indentation across all files.
+
+= 2026-06-22 - 1.1.1
 * New: Enable full admin bar menu tweak.
 
 = 2025-09-17 - 1.1.0
