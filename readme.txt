@@ -13,6 +13,9 @@ A collection of performance, privacy, security, and other tweaks. Minimalistic l
 
 == Changelog ==
 
+= 2026-06-22 - 1.1.3
+* Improved: Better throttled scroll event listener for horizontal scrollbar tweak.
+
 = 2026-06-22 - 1.1.2
 * New: Remove RSD link, shortlink, and wlwmanifest link tweaks.
 * New: Enable Jetpack offline mode tweak.
