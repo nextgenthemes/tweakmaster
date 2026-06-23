@@ -13,6 +13,14 @@
 		"nextgenthemes/wp-settings": "@dev",
 		"automattic/jetpack-autoloader": "^v5.0.3"
 	},
+	"extra": {
+		"wp-settings-release": {
+			"repository": {
+				"type": "vcs",
+				"url": "https://github.com/nextgenthemes/wp-settings.git"
+			}
+		}
+	},
 	"config": {
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true
