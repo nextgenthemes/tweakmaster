@@ -107,6 +107,15 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
+= 2026-06-23 - 1.1.5
+* New: Remove RSD link, Remove shortlink, Remove wlwmanifest link standalone tweaks.
+* Fix: EXIF Remover now uses the correct hook (add_filter).
+* Fix: Maintenance mode user capability check and auth cookie.
+* Fix: Admin bar greeting now uses the correct hook (add_filter).
+* Improved: Scroll progress bar JS — passive listener, null check, rAF throttling.
+* Improved: Conditional autoloader loading for graceful fallback.
+* Improved: Code quality, PHPStan fixes, type hints, namespace cleanup.
+
 = 2025-09-17 - 1.1.0
 * New: Admin email check interval setting.
 * New: Admin footer text setting.
