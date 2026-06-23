@@ -11,40 +11,6 @@ Donate link: https://nextgenthemes.com/donate
 
 A collection of performance, privacy, security, and other tweaks. Minimalistic lightweight plugin.
 
-== Changelog ==
-
-= 2026-06-22 - 1.1.3
-* Improved: Better throttled scroll event listener for horizontal scrollbar tweak.
-
-= 2026-06-22 - 1.1.2
-* New: Remove RSD link, shortlink, and wlwmanifest link tweaks.
-* New: Enable Jetpack offline mode tweak.
-* New: Enable maintenance mode tweak.
-* Improved: Coding style and tab indentation across all files.
-
-= 2026-06-22 - 1.1.1
-* New: Enable full admin bar menu tweak.
-
-= 2025-09-17 - 1.1.0
-* New: Admin email check interval setting.
-* New: Admin footer text setting.
-
-= 2025-08-03 - 1.0.6
-* Improved: sanitize, validate correctly, fix prefixes ...
-* Removed update disable tweak, not allowed on wp.org?
-
-= 2025-03-xx - 1.0.1-beta2 =
-* Improved: Tweak descriptions.
-* Fix: Admin Bar Greeting tweak.
-* Fix: Link to GH readme.
-* Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
-
-= 2025-03-15 - 1.0.1-beta1 =
-* New: Disable non production email tweak.
-
-= 2025-03-xx - 1.0.0-beta1 =
-* Initial release.
-
 == Description ==
 WP Tweak is a lightweight and minimalistic WordPress plugin designed to enhance your website with a curated set of tweaks. It focuses on improving performance, bolstering privacy, strengthening security, and adding other useful optimizations—all without unnecessary bloat. Perfect for users who want a simple yet effective solution to fine-tune their WordPress experience.
 
@@ -82,6 +48,12 @@ Requires a hard refresh of the page to take effect.
 * **Disable Non Production Emails**<br>
 If WP_ENV (Trellis) or wp_get_environment_type is not production, emails sending is mocked.
 * **Remove REST API links**
+* **Remove RSD link**<br>
+Removes Really Simple Discovery link tag from head.
+* **Remove shortlink**<br>
+Removes shortlink link tag from head and shortlink HTTP header.
+* **Remove wlwmanifest link**<br>
+Removes Windows Live Writer manifest link tag from head.
 * **Admin email check interval**<br>
 Time in seconds to display email verification message on login. Set to 0 to disable. Default is 15552000 (6 months).
 * **Admin footer text**<br>
@@ -106,7 +78,7 @@ Limit revisions for all post types. This will override the limit for each post t
 * **Disable XML-RPC - allow Jetpack IPs**<br>
 Allow XML-RPC only from Jetpack IPs
 * **Remove WP version**<br>
-Remove <code>WordPress/6.7.1; https://example.org</code> from html head
+Remove <code>WordPress/7.1.0; https://example.org</code> from html head
 * **Dequeue jQuery Migrate**<br>
 Dequeue jQuery Migrate from the jQuery script dependencies on the frontend. This is used to help devs debug from old versions of jQuery. You really do not need this on a production site.
 * **Script Optimizer**<br>
@@ -133,4 +105,24 @@ If you have questions on adding a more complex tweak please feel free to ask.
 == Screenshots ==
 (Maybe later)
 
+== Changelog ==
 
+= 2025-09-17 - 1.1.0
+* New: Admin email check interval setting.
+* New: Admin footer text setting.
+
+= 2025-08-03 - 1.0.6
+* Improved: sanitize, validate correctly, fix prefixes ...
+* Removed update disable tweak, not allowed on wp.org?
+
+= 2025-03-xx - 1.0.1-beta2 =
+* Improved: Tweak descriptions.
+* Fix: Admin Bar Greeting tweak.
+* Fix: Link to GH readme.
+* Fix: Rename `wptweak` to `tweakmaster` to fix multiple issues.
+
+= 2025-03-15 - 1.0.1-beta1 =
+* New: Disable non production email tweak.
+
+= 2025-03-xx - 1.0.0-beta1 =
+* Initial release.

@@ -3,7 +3,7 @@
 
 declare(strict_types = 1);
 
-define( 'ABSPATH', dirname( __DIR__, 4 ) . '/wp/' );
+define( 'ABSPATH', getenv( 'WP_CORE_DIR' ) . '/' );
 define( 'WPINC', 'wp-includes' );
 
 require ABSPATH . WPINC . '/functions.php';
