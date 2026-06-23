@@ -9,16 +9,16 @@
     "packages-dev": [
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "v5.0.11",
+            "version": "v5.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-autoloader.git",
-                "reference": "90bf7b3bc29cb7be74105ac99afab4c21bc47e29"
+                "reference": "b6abf43a9ea638d6a0edc02f0dd7575703f9c2a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/90bf7b3bc29cb7be74105ac99afab4c21bc47e29",
-                "reference": "90bf7b3bc29cb7be74105ac99afab4c21bc47e29",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/b6abf43a9ea638d6a0edc02f0dd7575703f9c2a1",
+                "reference": "b6abf43a9ea638d6a0edc02f0dd7575703f9c2a1",
                 "shasum": ""
             },
             "require": {
@@ -26,8 +26,7 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^6.0.7",
-                "automattic/phpunit-select-config": "^1.0.3",
+                "automattic/phpunit-select-config": "^1.0.9",
                 "composer/composer": "^2.2",
                 "yoast/phpunit-polyfills": "^4.0.0"
             },
@@ -68,9 +67,9 @@
                 "wordpress"
             ],
             "support": {
-                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.11"
+                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.20"
             },
-            "time": "2025-10-06T10:32:52+00:00"
+            "time": "2026-06-15T12:15:05+00:00"
         },
         {
             "name": "nextgenthemes/wp-settings",
@@ -78,12 +77,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextgenthemes/wp-settings.git",
-                "reference": "c899134604cca1d2cbea92ccebc8acdb2eb84429"
+                "reference": "133a5bd5218a29d76391b155086d914f9b4c1c3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextgenthemes/wp-settings/zipball/c899134604cca1d2cbea92ccebc8acdb2eb84429",
-                "reference": "c899134604cca1d2cbea92ccebc8acdb2eb84429",
+                "url": "https://api.github.com/repos/nextgenthemes/wp-settings/zipball/133a5bd5218a29d76391b155086d914f9b4c1c3f",
+                "reference": "133a5bd5218a29d76391b155086d914f9b4c1c3f",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +107,7 @@
             "support": {
                 "source": "https://github.com/nextgenthemes/wp-settings/tree/master"
             },
-            "time": "2025-10-21T22:59:15+00:00"
+            "time": "2026-02-17T08:43:53+00:00"
         }
     ],
     "aliases": [],
@@ -125,5 +124,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
