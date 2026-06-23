@@ -4,9 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc4a6d1b65d3b499ca79a68a51744651",
-    "packages": [],
-    "packages-dev": [
+    "content-hash": "0df1fee05b9fa6e7601b8eb465d9ab05",
+    "packages": [
         {
             "name": "automattic/jetpack-autoloader",
             "version": "v5.0.20",
@@ -74,28 +73,20 @@
         {
             "name": "nextgenthemes/wp-settings",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nextgenthemes/wp-settings.git",
-                "reference": "133a5bd5218a29d76391b155086d914f9b4c1c3f"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nextgenthemes/wp-settings/zipball/133a5bd5218a29d76391b155086d914f9b4c1c3f",
-                "reference": "133a5bd5218a29d76391b155086d914f9b4c1c3f",
-                "shasum": ""
+                "type": "path",
+                "url": "../../packages/wp-settings",
+                "reference": "f27b107600bef2f0fd2d0ee5d507bbaf6dd46a79"
             },
             "require": {
                 "php": ">=7.4"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
                     "includes/WP/init.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0"
             ],
@@ -104,12 +95,13 @@
                     "name": "Nicolas Jonas"
                 }
             ],
-            "support": {
-                "source": "https://github.com/nextgenthemes/wp-settings/tree/master"
-            },
-            "time": "2026-02-17T08:43:53+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         }
     ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {

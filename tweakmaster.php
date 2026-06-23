@@ -30,5 +30,9 @@ const PLUGIN_DIR    = __DIR__;
 const TWEAKS_DIR    = __DIR__ . '/php/tweaks';
 const TWEAKS_DIR_SA = __DIR__ . '/php/tweaks-standalone';
 
-require_once __DIR__ . '/vendor/autoload_packages.php';
+$autoloader = __DIR__ . '/vendor/autoload_packages.php';
+if ( file_exists( $autoloader ) ) {
+	require_once $autoloader;
+}
+
 require_once __DIR__ . '/php/init.php';
