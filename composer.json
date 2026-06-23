@@ -32,11 +32,8 @@
 	},
 	"repositories": {
 		"nextgenthemes/wp-settings": {
-			"type": "path",
-			"url": "../wp-settings",
-			"options": {
-				"symlink": true
-			}
+			"type": "vcs",
+			"url": "https://github.com/nextgenthemes/wp-settings.git"
 		}
 	},
 	"scripts": {}
