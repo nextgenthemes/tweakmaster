@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0df1fee05b9fa6e7601b8eb465d9ab05",
+    "content-hash": "f5798ccb268ad481e79799fe3f2c411b",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
@@ -75,7 +75,7 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "../../packages/wp-settings",
+                "url": "../wp-settings",
                 "reference": "f27b107600bef2f0fd2d0ee5d507bbaf6dd46a79"
             },
             "require": {
