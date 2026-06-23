@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"build": "./bin/build-readme",
-		"test": "cd .. && phpunit --testsuite tweakmaster"
+		"test": "cd ../.. && phpunit --testsuite tweakmaster"
 	},
 	"author": "Nicolas Jonas",
 	"license": "GPL-3.0"
