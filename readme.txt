@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.5
+Stable tag: 1.1.5.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -106,15 +106,6 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
-
-= 2026-06-23 - 1.1.5
-* New: Remove RSD link, Remove shortlink, Remove wlwmanifest link standalone tweaks.
-* Fix: EXIF Remover now uses the correct hook (add_filter).
-* Fix: Maintenance mode user capability check and auth cookie.
-* Fix: Admin bar greeting now uses the correct hook (add_filter).
-* Improved: Scroll progress bar JS — passive listener, null check, rAF throttling.
-* Improved: Conditional autoloader loading for graceful fallback.
-* Improved: Code quality, PHPStan fixes, type hints, namespace cleanup.
 
 = 2025-09-17 - 1.1.0
 * New: Admin email check interval setting.
