@@ -1,6 +1,9 @@
 {
 	"name": "@nextgenthemes/tweakmaster",
 	"private": true,
+	"ngt-bind": {
+		"sym-plugin": true
+	},
 	"scripts": {
 		"build": "./bin/build-readme",
 		"test": "cd ../.. && phpunit --testsuite tweakmaster"
