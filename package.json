@@ -1,10 +1,6 @@
 {
-  "name": "@nextgenthemes/tweakmaster",
-  "private": true,
-  "scripts": {
-    "build": "composer run build",
-    "test": "phpunit"
-  },
-  "author": "Nicolas Jonas",
-  "license": "GPL-3.0"
+	"name": "@nextgenthemes/tweakmaster",
+	"private": true,
+	"author": "Nicolas Jonas",
+	"license": "GPL-3.0"
 }
