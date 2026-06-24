@@ -2,9 +2,9 @@ const d = document;
 setupScrollProgressBar();
 
 function setupScrollProgressBar() {
-	const progressBar = d.querySelector( '.tweakmaster-scroll__progress' );
+	const progressBar = d.querySelector('.tweakmaster-scroll__progress');
 
-	if ( ! progressBar ) {
+	if (!progressBar) {
 		return;
 	}
 
@@ -16,18 +16,17 @@ function setupScrollProgressBar() {
 		const scrollTop = d.body.scrollTop || d.documentElement.scrollTop;
 		const height = d.documentElement.scrollHeight - d.documentElement.clientHeight;
 
-		progressBar.style.width = ( scrollTop / height ) * 100 + '%';
+		progressBar.style.width = (scrollTop / height) * 100 + '%';
 	}
 
 	window.addEventListener(
 		'scroll',
 		() => {
-			if ( ! ticking ) {
+			if (!ticking) {
 				ticking = true;
-				requestAnimationFrame( update );
+				requestAnimationFrame(update);
 			}
 		},
-		{ passive: true },
+		{ passive: true }
 	);
 }
-
