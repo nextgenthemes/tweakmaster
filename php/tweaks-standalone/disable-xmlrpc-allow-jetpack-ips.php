@@ -116,7 +116,7 @@ function valid_ip( string $ip ): bool {
  * Retrieves the body content from a remote URL.
  *
  * @param  string               $url  The URL of the remote resource.
- * @param  array<string, mixed> $args Optional. Additional arguments for wp_safe_remote_get.
+ * @param  array<string,mixed> $args Optional. Additional arguments for wp_safe_remote_get.
  * @return string|\WP_Error           The response body content from the remote URL, or a WP_Error on failure.
  */
 function remote_get_body( string $url, array $args = array() ) {

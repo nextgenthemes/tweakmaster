@@ -25,8 +25,8 @@ add_filter( 'wp_mail', __NAMESPACE__ . '\disable_non_production_emails', 9999 );
 /**
  * Disable all emails by filtering wp_mail
  *
- * @param array<string, mixed> $args Array of arguments for wp_mail.
- * @return array<string, mixed>      Modified array of arguments.
+ * @param array<string,mixed> $args Array of arguments for wp_mail.
+ * @return array<string,mixed>      Modified array of arguments.
  */
 function disable_non_production_emails( array $args ): array {
 

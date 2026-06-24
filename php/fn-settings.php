@@ -40,14 +40,14 @@ function settings_instance(): Settings {
 }
 
 /**
- * @return array<string, mixed>
+ * @return array<string,mixed>
  */
 function options(): array {
 	return settings_instance()->get_options();
 }
 
 /**
- * @return array<string, mixed>
+ * @return array<string,mixed>
  */
 function default_options(): array {
 	return settings_instance()->get_options_defaults();
@@ -69,7 +69,7 @@ function settings_data(): SettingsData {
 }
 
 /**
- * @return array<string, array<string, mixed>>
+ * @return array<string,array<string,mixed>>
  */
 function general_settings(): array {
 	return array(
@@ -261,7 +261,7 @@ function general_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function security_settings(): array {
 
@@ -307,7 +307,7 @@ function security_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function performance_settings(): array {
 	return array(
@@ -336,7 +336,7 @@ function performance_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function media_settings(): array {
 	return array(
@@ -379,7 +379,7 @@ function media_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function privacy_settings(): array {
 
@@ -420,7 +420,7 @@ function privacy_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function plugins_settings(): array {
 
@@ -452,7 +452,7 @@ function plugins_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function revision_settings(): array {
 
@@ -482,7 +482,7 @@ function revision_settings(): array {
 }
 
 /**
- * @return array<string, array<string, string|int|bool|float>>
+ * @return array<string,array<string,string|int|bool|float>>
  */
 function tools_settings(): array {
 
@@ -526,7 +526,7 @@ function any_option_is_set( array $options_keys ): bool {
 /**
  * Get post types which support revisions.
  *
- * @return array<string, string>
+ * @return array<string,string>
  */
 function get_revision_post_types(): array {
 

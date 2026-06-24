@@ -33,9 +33,9 @@ function enqueue_admin_bar_greeting_module(): void {
 }
 
 /**
- * @param array<string, string> $attributes HTML tag attributes
+ * @param array<string,string> $attributes HTML tag attributes
  *
- * @return array<string, string>            HTML tag attributes (modified)
+ * @return array<string,string>            HTML tag attributes (modified)
  */
 function add_greeting_data_attribute( array $attributes ): array {
 

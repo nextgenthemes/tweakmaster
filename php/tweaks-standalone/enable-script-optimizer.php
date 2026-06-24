@@ -135,7 +135,7 @@ function optimize_script( string $handle, ?_WP_Dependency $data ): void {
  * Array Key Exists and Has Value
  *
  * @param string               $key           The key to search for in the array.
- * @param array<string, mixed> $arr           The array to search.
+ * @param array<string,mixed> $arr           The array to search.
  * @param mixed                $default_value The default value to return if not found or is empty. Default is an empty string.
  *
  * @return mixed                              The value of the key found in the array if it exists or the value of `$default_value` if not found or is empty.

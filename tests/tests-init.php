@@ -10,7 +10,7 @@ use Nextgenthemes\WP\SettingValidator;
 class Tests_Init extends WP_UnitTestCase {
 
 	/**
-	 * @return array<array-key,array<string, string>>
+	 * @return array<array-key,array<string,string>>
 	 */
 	public function data_setting_keys_from_files(): array {
 
@@ -38,7 +38,7 @@ class Tests_Init extends WP_UnitTestCase {
 	}
 
 	/**
-	 * @return array<array-key,array<string, string>>
+	 * @return array<array-key,array<string,string>>
 	 */
 	public function data_standalone_setting_keys(): array {
 

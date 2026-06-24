@@ -74,7 +74,7 @@ function cached_wp_get_upload_dir_primer(): void {
  * Without a primed cache, `wp_get_upload_dir()` would trigger a call to
  * `wp_get_font_dir()` which would trigger a call to `wp_get_upload_dir()`.
  *
- * @return array<string, string|false>
+ * @return array<string,string|false>
  */
 function cached_wp_get_upload_dir(): array {
 	static $cached = null;
@@ -92,8 +92,8 @@ function cached_wp_get_upload_dir(): array {
  * Relocated files uploaded by the Font Library from `wp-content/fonts/` to a
  * sub-directory of the uploads folder.
  *
- * @param  array<string, string|false> $font_directory The default in which to store fonts.
- * @return array<string, string|false>                 The modified fonts directory.
+ * @param  array<string,string|false> $font_directory The default in which to store fonts.
+ * @return array<string,string|false>                 The modified fonts directory.
  */
 function filter_default_font_directory( array $font_directory ): array {
 	$upload_dir = cached_wp_get_upload_dir();
