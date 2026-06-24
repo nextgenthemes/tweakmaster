@@ -9,5 +9,8 @@
 		"test": "cd ../.. && phpunit --testsuite tweakmaster"
 	},
 	"author": "Nicolas Jonas",
-	"license": "GPL-3.0"
+	"license": "GPL-3.0",
+	"devDependencies": {
+		"webpack-notifier": "^1.15.0"
+	}
 }
