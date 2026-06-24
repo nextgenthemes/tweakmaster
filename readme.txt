@@ -107,6 +107,16 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
+= 2026-06-24 - 1.1.2
+* New: Remove RSD link, shortlink, and wlwmanifest link from head.
+* New: Enable Jetpack offline mode tweak.
+* New: Enable maintenance mode tweak.
+* New: Admin email check interval setting.
+* New: Admin footer text setting.
+* Improved: PHPDoc annotations across all files.
+* Improved: Coding style, tab indentation, and restructuring.
+* Dev: Deploy centralized in parent repo, removed per-plugin workflows.
+
 = 2025-09-17 - 1.1.0
 * New: Admin email check interval setting.
 * New: Admin footer text setting.
