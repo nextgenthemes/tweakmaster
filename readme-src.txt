@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.5.15
+Stable tag: 1.1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -32,6 +32,16 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2026-06-24 - 1.1.2
+* New: Remove RSD link, shortlink, and wlwmanifest link from head.
+* New: Enable Jetpack offline mode tweak.
+* New: Enable maintenance mode tweak.
+* New: Admin email check interval setting.
+* New: Admin footer text setting.
+* Improved: PHPDoc annotations across all files.
+* Improved: Coding style, tab indentation, and restructuring.
+* Dev: Deploy centralized in parent repo, removed per-plugin workflows.
 
 = 2025-09-17 - 1.1.0
 * New: Admin email check interval setting.
