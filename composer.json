@@ -1,42 +1,32 @@
 {
-	"name": "nextgenthemes/tweakmaster",
-	"type": "wordpress-plugin",
-	"license": "GPL-3.0",
-	"description": "TweakMaster - A collection or performance, privacy, security and other tweaks..",
-	"authors": [
-		{
-			"name": "Nicolas Jonas"
-		}
-	],
-	"require": {
-		"php": ">=7.4",
-		"nextgenthemes/wp-settings": "@dev",
-		"automattic/jetpack-autoloader": "^v5.0.3"
-	},
-	"extra": {
-		"release-repo-changes": {
-			"nextgenthemes/wp-settings": {
-				"type": "vcs",
-				"url": "https://github.com/nextgenthemes/wp-settings.git"
-			}
-		}
-	},
-	"config": {
-		"allow-plugins": {
-			"automattic/jetpack-autoloader": true
-		},
-		"optimize-autoloader": true,
-		"platform": {
-			"php": "7.4"
-		}
-	},
-	"repositories": {
-		"nextgenthemes/wp-settings": {
-			"type": "path",
-			"url": "../wp-settings",
-			"options": {
-				"symlink": true
-			}
-		}
-	}
+  "name": "nextgenthemes/tweakmaster",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0",
+  "description": "TweakMaster - A collection or performance, privacy, security and other tweaks..",
+  "authors": [
+    {
+      "name": "Nicolas Jonas"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "nextgenthemes/wp-settings": "@dev",
+    "automattic/jetpack-autoloader": "^v5.0.3"
+  },
+  "extra": {},
+  "config": {
+    "allow-plugins": {
+      "automattic/jetpack-autoloader": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "repositories": {
+    "nextgenthemes/wp-settings": {
+      "type": "vcs",
+      "url": "https://github.com/nextgenthemes/wp-settings.git"
+    }
+  }
 }
