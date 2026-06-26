@@ -1,16 +1,16 @@
 {
 	"name": "@nextgenthemes/tweakmaster",
 	"private": true,
-	"ngt-bind": {
-		"sym-plugin": true
-	},
 	"scripts": {
 		"build": "./bin/build-readme",
 		"test": "cd ../.. && phpunit --testsuite tweakmaster"
 	},
-	"author": "Nicolas Jonas",
-	"license": "GPL-3.0",
 	"devDependencies": {
 		"webpack-notifier": "^1.15.0"
-	}
+	},
+	"ngt-bind": {
+		"sym-plugin": true
+	},
+	"author": "Nicolas Jonas",
+	"license": "GPL-3.0-only"
 }
