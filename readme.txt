@@ -107,7 +107,7 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
-= 2026-06-24 - 1.1.2
+= 2026-06-26 - 1.1.3
 * New: Remove RSD link, shortlink, and wlwmanifest link from head.
 * New: Enable Jetpack offline mode tweak.
 * New: Enable maintenance mode tweak.
