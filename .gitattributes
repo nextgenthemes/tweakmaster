@@ -1,15 +1,16 @@
-/bin           export-ignore
-/readme        export-ignore
-/tests         export-ignore
+/bin            export-ignore
+/readme         export-ignore
+/tests          export-ignore
 /php/tweaks-standalone-not-wp-org export-ignore
-/.*            export-ignore
-/*.dist        export-ignore
-/*.js          export-ignore
-/*.neon        export-ignore
-/*.xml         export-ignore
-/*.yml         export-ignore
-/package*.json export-ignore
-/tsconfig.json export-ignore
+/.*             export-ignore
+/*.dist         export-ignore
+/*.js           export-ignore
+/*.neon         export-ignore
+/*.xml          export-ignore
+/*.yml          export-ignore
+/package*.json  export-ignore
+/tsconfig.json  export-ignore
+/readme-src.txt export-ignore
 
 build/* -diff
 
