@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.2
+Stable tag: 1.4.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -126,6 +126,13 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2026-07-13 - 1.4.0
+* New: Standalone tweaks to remove dashboard widgets (Welcome Panel, Activity, Quick Draft, At a Glance, Events and News, Site Health).
+* New: WP-CLI `feature-list` command for generating the features list.
+* Improved: Build script converted from PHP to shell for simpler maintenance.
+* Dev: Added PHPStan `dynamicConstantNames` for WordPress constants.
+* Dev: Added tsconfig.json and standardized .gitignore.
 
 = 2026-06-24 - 1.1.2
 * New: Remove RSD link, shortlink, and wlwmanifest link from head.
