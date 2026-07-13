@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.4-beta1
+Stable tag: 1.1.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -71,7 +71,7 @@ Removes the WordPress Events and News dashboard widget.
 * **Remove "Site Health Status" widget**<br>
 Removes the Site Health Status dashboard widget.
 * **Set user agent**<br>
-WP really hates privacy and sends this <code>WordPress/1.0; https://example.org</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
+WP really hates privacy and sends this <code>WordPress/7.0; https://symbiosistheme.test</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>
 Remove EXIF data from uploaded images.
 * **Convert jpeg to avif**<br>
@@ -84,13 +84,22 @@ Default is 82
 Default is 82
 * **Webp compression**<br>
 Default is 86
+* **Revisions for Posts**
+* **Revisions for Pages**
+* **Revisions for Custom CSS**
+* **Revisions for Patterns**
+* **Revisions for Templates**
+* **Revisions for Template Parts**
+* **Revisions for Global Styles**
+* **Revisions for Navigation Menus**
 * **Limit ALL revisions**<br>
 Limit revisions for all post types. This will override the limit for each post type from above!
 * **Disable XML-RPC**
 * **Disable XML-RPC - allow Jetpack IPs**<br>
 Allow XML-RPC only from Jetpack IPs
 * **Remove WP version**<br>
-Remove <code>WordPress/7.1.0; https://example.org</code> from html head
+Remove <code>{ tweaks }lt;meta name={ tweaks }quot;generator{ tweaks }quot; content={ tweaks }quot;WordPress 7.0{ tweaks }quot; /{ tweaks }gt;
+</code> from html head
 * **Dequeue jQuery Migrate**<br>
 Dequeue jQuery Migrate from the jQuery script dependencies on the frontend. This is used to help devs debug from old versions of jQuery. You really do not need this on a production site.
 * **Script Optimizer**<br>
@@ -104,7 +113,6 @@ Sets <code>wpcf7_autop_or_not</code> filter to <code>false</code>
 * **Enable Jetpack offline mode**
 * **Enable maintenance mode**
 * **Enable duplicate post**
-
 
 = Contribute to add quality tweaks to the plugin reviewed by me =
 

@@ -36,3 +36,8 @@ if ( file_exists( $autoloader ) ) {
 }
 
 require_once __DIR__ . '/php/init.php';
+
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	require_once __DIR__ . '/php/CLI.php';
+	\WP_CLI::add_command( 'tweakmaster', 'Nextgenthemes\TweakMaster\CLI' );
+}
