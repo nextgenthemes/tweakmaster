@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -32,6 +32,9 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2026-07-13 - 1.4.1
+* Fix: Welcome panel removal using correct `welcome_panel` hook.
 
 = 2026-07-13 - 1.4.0
 * New: Standalone tweaks to remove dashboard widgets (Welcome Panel, Activity, Quick Draft, At a Glance, Events and News, Site Health).
