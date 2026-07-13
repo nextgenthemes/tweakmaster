@@ -107,6 +107,9 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
+= 2026-07-13 - 1.1.4
+* Added 6 standalone tweak modules for widget/panel management
+
 = 2026-06-26 - 1.1.3
 * New: Remove RSD link, shortlink, and wlwmanifest link from head.
 * New: Enable Jetpack offline mode tweak.
