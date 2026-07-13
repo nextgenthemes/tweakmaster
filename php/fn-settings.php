@@ -257,6 +257,48 @@ function general_settings(): array {
 			'type'        => 'string',
 			'default'     => 'default',
 		),
+		'remove-welcome-panel' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove Welcome Panel', 'tweakmaster' ),
+			'description' => __( 'Removes the Welcome Panel from the dashboard.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-widget-right-now' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove "At a Glance" widget', 'tweakmaster' ),
+			'description' => __( 'Removes the At a Glance dashboard widget.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-widget-activity' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove "Activity" widget', 'tweakmaster' ),
+			'description' => __( 'Removes the Activity dashboard widget.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-widget-quick-draft' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove "Quick Draft" widget', 'tweakmaster' ),
+			'description' => __( 'Removes the Quick Draft dashboard widget.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-widget-events-news' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove "WordPress Events and News" widget', 'tweakmaster' ),
+			'description' => __( 'Removes the WordPress Events and News dashboard widget.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
+		'remove-widget-site-health' => array(
+			'tab'         => 'general',
+			'label'       => __( 'Remove "Site Health Status" widget', 'tweakmaster' ),
+			'description' => __( 'Removes the Site Health Status dashboard widget.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 	);
 }
 
