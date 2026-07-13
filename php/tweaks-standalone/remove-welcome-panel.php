@@ -19,4 +19,8 @@ declare(strict_types = 1);
 
 namespace Nextgenthemes\TweakMaster;
 
-remove_action( 'wp_dashboard_setup', 'wp_welcome_panel' );
+add_action( 'wp_dashboard_setup', __NAMESPACE__ . '\remove_welcome_panel' );
+
+function remove_welcome_panel(): void {
+	remove_action( 'welcome_panel', 'wp_welcome_panel' );
+}
