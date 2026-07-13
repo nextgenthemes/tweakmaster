@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.2
+Stable tag: 1.1.4-beta1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -58,6 +58,18 @@ Removes Windows Live Writer manifest link tag from head.
 Time in seconds to display email verification message on login. Set to 0 to disable. Default is 15552000 (6 months).
 * **Admin footer text**<br>
 a href links are allowed. Use "default" for default text.
+* **Remove Welcome Panel**<br>
+Removes the Welcome Panel from the dashboard.
+* **Remove "At a Glance" widget**<br>
+Removes the At a Glance dashboard widget.
+* **Remove "Activity" widget**<br>
+Removes the Activity dashboard widget.
+* **Remove "Quick Draft" widget**<br>
+Removes the Quick Draft dashboard widget.
+* **Remove "WordPress Events and News" widget**<br>
+Removes the WordPress Events and News dashboard widget.
+* **Remove "Site Health Status" widget**<br>
+Removes the Site Health Status dashboard widget.
 * **Set user agent**<br>
 WP really hates privacy and sends this <code>WordPress/1.0; https://example.org</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>
@@ -107,10 +119,7 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
-= 2026-07-13 - 1.1.4
-* Added 6 standalone tweak modules for widget/panel management
-
-= 2026-06-26 - 1.1.3
+= 2026-06-24 - 1.1.2
 * New: Remove RSD link, shortlink, and wlwmanifest link from head.
 * New: Enable Jetpack offline mode tweak.
 * New: Enable maintenance mode tweak.
