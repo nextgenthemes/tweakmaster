@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.4.2
+Stable tag: 1.4.3-beta1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -70,6 +70,8 @@ Removes the Quick Draft dashboard widget.
 Removes the WordPress Events and News dashboard widget.
 * **Remove "Site Health Status" widget**<br>
 Removes the Site Health Status dashboard widget.
+* **404 Redirect Home**<br>
+Redirects 404 pages to the homepage.
 * **Set user agent**<br>
 WP really hates privacy and sends this <code>WordPress/7.0; https://symbiosistheme.test</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>

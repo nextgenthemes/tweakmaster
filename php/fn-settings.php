@@ -299,6 +299,13 @@ function general_settings(): array {
 			'type'        => 'boolean',
 			'default'     => false,
 		),
+		'404-redirect-home' => array(
+			'tab'         => 'general',
+			'label'       => __( '404 Redirect Home', 'tweakmaster' ),
+			'description' => __( 'Redirects 404 pages to the homepage.', 'tweakmaster' ),
+			'type'        => 'boolean',
+			'default'     => false,
+		),
 	);
 }
 
