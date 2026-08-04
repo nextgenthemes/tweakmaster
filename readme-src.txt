@@ -33,6 +33,9 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
+= 2026-08-04 - 1.4.3-beta5
+* New: 404 Redirect Home — redirects 404 pages to the homepage.
+
 = 2026-07-29 - 1.4.3-beta1
 * New: 404 Redirect Home — redirects 404 pages to the homepage.
 
