@@ -130,7 +130,7 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
-= 2026-08-05 - 1.4.4
+= 2026-08-05 - 1.4.2.1
 * New: 404 Redirect Home — redirects 404 pages to the homepage.
 
 = 2026-07-13 - 1.4.1
