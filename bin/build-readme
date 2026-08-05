@@ -4,7 +4,7 @@ set -euo pipefail
 
 dir="$(cd "$(dirname "$0")/.." && pwd)"
 
-tweaks=$(wp @sdev tweakmaster feature_list)
+tweaks=$(wp @stage tweakmaster feature_list)
 content=$(<"$dir/readme-src.txt")
 
 echo "${content/\{ tweaks \}/$tweaks}" > "$dir/readme.txt"

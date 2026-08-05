@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "779d06d40fa4929fa724b1fad5f0e3a4",
+    "content-hash": "496f7529118860bddd1628281a34a28b",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "v5.0.21",
+            "version": "v5.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-autoloader.git",
-                "reference": "07b6e0d9b5f948659ce8503140551d5758865a3c"
+                "reference": "9c7627e832db897ebed54c0cb575eb089ab8d08a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/07b6e0d9b5f948659ce8503140551d5758865a3c",
-                "reference": "07b6e0d9b5f948659ce8503140551d5758865a3c",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/9c7627e832db897ebed54c0cb575eb089ab8d08a",
+                "reference": "9c7627e832db897ebed54c0cb575eb089ab8d08a",
                 "shasum": ""
             },
             "require": {
@@ -66,9 +66,9 @@
                 "wordpress"
             ],
             "support": {
-                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.21"
+                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.22"
             },
-            "time": "2026-07-13T23:33:42+00:00"
+            "time": "2026-08-03T23:25:08+00:00"
         },
         {
             "name": "nextgenthemes/wp-settings",
@@ -76,7 +76,7 @@
             "dist": {
                 "type": "path",
                 "url": "../wp-settings",
-                "reference": "4b883a45acde5ef23f5555fb7bd8a8c1cda381cf"
+                "reference": "bc029f99b6ce1e36521f58fd2d81510a1e3913a3"
             },
             "require": {
                 "php": ">=7.4"
@@ -96,7 +96,7 @@
                 }
             ],
             "transport-options": {
-                "symlink": true,
+                "symlink": false,
                 "relative": true
             }
         }
