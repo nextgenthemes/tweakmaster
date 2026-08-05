@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.4.3-beta4
+Stable tag: 1.4.3-beta1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -73,7 +73,7 @@ Removes the Site Health Status dashboard widget.
 * **404 Redirect Home**<br>
 Redirects 404 pages to the homepage.
 * **Set user agent**<br>
-WP really hates privacy and sends this <code>WordPress/7.0.1; https://symbiosistheme.test</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
+WP really hates privacy and sends this <code>WordPress/7.0; https://stage.nextgenthemes.test</code> to every site it makes calls to. You can empty the field, pretend to be Chrome <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36</code> or something else. <code>default</code> will change nothing.
 * **Remove EXIF**<br>
 Remove EXIF data from uploaded images.
 * **Convert jpeg to avif**<br>
@@ -94,13 +94,14 @@ Default is 86
 * **Revisions for Template Parts**
 * **Revisions for Global Styles**
 * **Revisions for Navigation Menus**
+* **Revisions for Downloads**
 * **Limit ALL revisions**<br>
 Limit revisions for all post types. This will override the limit for each post type from above!
 * **Disable XML-RPC**
 * **Disable XML-RPC - allow Jetpack IPs**<br>
 Allow XML-RPC only from Jetpack IPs
 * **Remove WP version**<br>
-Remove <code>{ tweaks }lt;meta name={ tweaks }quot;generator{ tweaks }quot; content={ tweaks }quot;WordPress 7.0.1{ tweaks }quot; /{ tweaks }gt;
+Remove <code>
 </code> from html head
 * **Dequeue jQuery Migrate**<br>
 Dequeue jQuery Migrate from the jQuery script dependencies on the frontend. This is used to help devs debug from old versions of jQuery. You really do not need this on a production site.
@@ -128,6 +129,9 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 == Changelog ==
+
+= 2026-08-04 - 1.4.3-beta5
+* New: 404 Redirect Home — redirects 404 pages to the homepage.
 
 = 2026-07-29 - 1.4.3-beta1
 * New: 404 Redirect Home — redirects 404 pages to the homepage.
