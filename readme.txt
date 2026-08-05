@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.4.4
+Stable tag: 1.4.2.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -130,7 +130,10 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 == Changelog ==
 
-= 2026-08-05 - 1.4.2.1
+= 2026-08-04 - 1.4.3-beta5
+* New: 404 Redirect Home — redirects 404 pages to the homepage.
+
+= 2026-07-29 - 1.4.3-beta1
 * New: 404 Redirect Home — redirects 404 pages to the homepage.
 
 = 2026-07-13 - 1.4.1
