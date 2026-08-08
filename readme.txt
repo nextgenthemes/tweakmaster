@@ -4,7 +4,7 @@ Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.4.3-beta1
+Stable tag: 1.4.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Donate link: https://nextgenthemes.com/donate
@@ -132,10 +132,10 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 ## Changelog
 
-### 2026-08-08 - 1.4.3 
+### 2026-08-08 - 1.4.3
 
 * Improved: Removed web request to get Jetpack IPs.
-* Improved: Removed file build script that is not supposed to be shipped with the plugin.
+* Improved: Removed file build script from distribution.
 
 ### 2026-08-05 - 1.4.2.2
 
