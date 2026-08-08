@@ -24,6 +24,7 @@
 	},
 	"repositories": [
 		{
+			"name": "nextgenthemes/wp-settings",
 			"type": "path",
 			"url": "../wp-settings",
 			"options": {

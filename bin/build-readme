@@ -2,9 +2,10 @@
 
 set -euo pipefail
 
-dir="$(cd "$(dirname "$0")/.." && pwd)"
+plugin_dir="$(cd "$(dirname "$0")/.." && pwd)"
 
+n-sync-plug-to-zima-sym.nu tweakmaster
 tweaks=$(wp @stage tweakmaster feature_list)
-content=$(<"$dir/readme-src.txt")
+content=$(<"$plugin_dir/readme-src.md")
 
-echo "${content/\{ tweaks \}/$tweaks}" > "$dir/readme.txt"
+echo "${content/\{ tweaks \}/$tweaks}" > "$plugin_dir/readme.txt"
