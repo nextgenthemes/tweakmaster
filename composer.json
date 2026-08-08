@@ -1,7 +1,7 @@
 {
 	"name": "nextgenthemes/tweakmaster",
 	"type": "wordpress-plugin",
-	"license": "GPL-3.0",
+	"license": "GPL-3.0-only",
 	"description": "TweakMaster - A collection or performance, privacy, security and other tweaks..",
 	"authors": [
 		{
