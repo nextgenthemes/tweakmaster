@@ -31,6 +31,7 @@ function settings_instance(): Settings {
 					'performance' => array( 'title' => __( 'Performance', 'tweakmaster' ) ),
 					'plugins'     => array( 'title' => __( 'Plugins', 'tweakmaster' ) ),
 					'tools'       => array( 'title' => __( 'Tools', 'tweakmaster' ) ),
+					'snippets'    => array( 'title' => __( 'Snippets', 'tweakmaster' ) ),
 				),
 			)
 		);
@@ -62,7 +63,8 @@ function settings_data(): SettingsData {
 		security_settings(),
 		performance_settings(),
 		plugins_settings(),
-		tools_settings()
+		tools_settings(),
+		snippet_settings()
 	);
 
 	return new SettingsData( $settings );
@@ -547,6 +549,60 @@ function tools_settings(): array {
 			'default'     => false,
 			'label'       => __( 'Enable duplicate post', 'tweakmaster' ),
 			'type'        => 'boolean',
+		),
+	);
+}
+
+/**
+ * @return array<string,array<string,string|int|bool|float>>
+ */
+function snippet_settings(): array {
+
+	return array(
+		'global-header-snippet' => array(
+			'tab'         => 'snippets',
+			'default'     => '',
+			'option'      => true,
+			'ui'          => 'textarea',
+			'label'       => __( 'Global Header Snippet', 'tweakmaster' ),
+			'type'        => 'string',
+			'description' => __( 'Inside <code>&lt;head&gt;</code> via <code>wp_head</code> hook.', 'tweakmaster' ),
+		),
+		'global-body-snippet' => array(
+			'tab'         => 'snippets',
+			'default'     => '',
+			'option'      => true,
+			'ui'          => 'textarea',
+			'label'       => __( 'Global Body Snippet', 'tweakmaster' ),
+			'type'        => 'string',
+			'description' => __( 'Right after <code>&lt;body&gt;</code> opens via <code>wp_body_open</code> hook.', 'tweakmaster' ),
+		),
+		'global-footer-snippet' => array(
+			'tab'         => 'snippets',
+			'default'     => '',
+			'option'      => true,
+			'ui'          => 'textarea',
+			'label'       => __( 'Global Footer Snippet', 'tweakmaster' ),
+			'type'        => 'string',
+			'description' => __( 'Before <code>&lt;/body&gt;</code> closes via <code>wp_footer</code> hook.', 'tweakmaster' ),
+		),
+		'content-prepend-snippet' => array(
+			'tab'         => 'snippets',
+			'default'     => '',
+			'option'      => true,
+			'ui'          => 'textarea',
+			'label'       => __( 'Content Prepend Snippet', 'tweakmaster' ),
+			'type'        => 'string',
+			'description' => __( 'Output prepended to the_content via <code>the_content</code> filter.', 'tweakmaster' ),
+		),
+		'content-append-snippet' => array(
+			'tab'         => 'snippets',
+			'default'     => '',
+			'option'      => true,
+			'ui'          => 'textarea',
+			'label'       => __( 'Content Append Snippet', 'tweakmaster' ),
+			'type'        => 'string',
+			'description' => __( 'Output appended to the_content via <code>the_content</code> filter.', 'tweakmaster' ),
 		),
 	);
 }

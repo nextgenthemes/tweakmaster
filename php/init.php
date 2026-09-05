@@ -36,6 +36,10 @@ function init_public(): void {
 	require_file_if_option_is_set( 'user-agent' );
 	require_file_if_option_is_set( 'admin-footer-text' );
 	require_file_if_option_is_set( 'admin-email-check-interval' );
+
+	if ( any_option_is_set( [ 'global-header-snippet', 'global-body-snippet', 'global-footer-snippet', 'content-prepend-snippet', 'content-append-snippet' ] ) ) {
+		require_once TWEAKS_DIR . '/snippet-inserter.php';
+	}
 }
 
 function require_file_if_option_is_set( string $key ): void {
