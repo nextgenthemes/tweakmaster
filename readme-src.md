@@ -2,7 +2,7 @@
 Contributors: nico23
 Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.4.3.2
 License: GPLv3
@@ -34,6 +34,11 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 ## Changelog
+
+### 2026-09-09 - 1.4.4
+
+* Fix: Readme rendering — quoted widget names now use backticks.
+* Fix: Plugin URL on wordpress.org.
 
 ### 2026-08-08 - 1.4.3
 

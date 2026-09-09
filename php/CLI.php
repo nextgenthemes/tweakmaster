@@ -21,7 +21,7 @@ class CLI extends WP_CLI_Command {
 		$settings = settings_data()->get_all();
 
 		foreach ( $settings as $key => $setting ) {
-			$line = '* **' . preg_replace( '/"([^"]+)"/', '<code>$1</code>', $setting->label ) . '**';
+			$line = '* **' . preg_replace( '/"([^"]+)"/', '`$1`', $setting->label ) . '**';
 
 			if ( ! empty( $setting->description ) ) {
 				$line .= '<br>' . PHP_EOL . $setting->description;

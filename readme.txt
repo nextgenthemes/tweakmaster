@@ -2,7 +2,7 @@
 Contributors: nico23
 Tags: performance, privacy, security, tweaks, lightweight
 Requires at least: 6.6
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.4.3.2
 License: GPLv3
@@ -61,15 +61,15 @@ Time in seconds to display email verification message on login. Set to 0 to disa
 a href links are allowed. Use "default" for default text.
 * **Remove Welcome Panel**<br>
 Removes the Welcome Panel from the dashboard.
-* **Remove <code>At a Glance</code> widget**<br>
+* **Remove `At a Glance` widget**<br>
 Removes the At a Glance dashboard widget.
-* **Remove <code>Activity</code> widget**<br>
+* **Remove `Activity` widget**<br>
 Removes the Activity dashboard widget.
-* **Remove <code>Quick Draft</code> widget**<br>
+* **Remove `Quick Draft` widget**<br>
 Removes the Quick Draft dashboard widget.
-* **Remove <code>WordPress Events and News</code> widget**<br>
+* **Remove `WordPress Events and News` widget**<br>
 Removes the WordPress Events and News dashboard widget.
-* **Remove <code>Site Health Status</code> widget**<br>
+* **Remove `Site Health Status` widget**<br>
 Removes the Site Health Status dashboard widget.
 * **404 Redirect Home**<br>
 Redirects 404 pages to the homepage.
@@ -131,6 +131,11 @@ If you have questions on adding a more complex tweak please feel free to ask.
 (Maybe later)
 
 ## Changelog
+
+### 2026-09-09 - 1.4.4
+
+* Fix: Readme rendering — quoted widget names now use backticks.
+* Fix: Plugin URL on wordpress.org.
 
 ### 2026-08-08 - 1.4.3
 
