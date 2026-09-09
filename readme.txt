@@ -136,6 +136,7 @@ If you have questions on adding a more complex tweak please feel free to ask.
 
 * Fix: Readme rendering — quoted widget names now use backticks.
 * Fix: Plugin URL on wordpress.org.
+* New: Snippet inserter tweak.
 
 ### 2026-08-08 - 1.4.3
 
