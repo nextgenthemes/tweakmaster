@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'nextgenthemes/tweakmaster',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '8f0644c5d3cccfa8c510f4a75a705433ff8d3799',
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
+    ),
+    'versions' => array(
+        'automattic/jetpack-autoloader' => array(
+            'pretty_version' => 'v5.0.23',
+            'version' => '5.0.23.0',
+            'reference' => 'd11b2d621035dcb920abce8ae09bebd5da5f9ff8',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../automattic/jetpack-autoloader',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'nextgenthemes/tweakmaster' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '8f0644c5d3cccfa8c510f4a75a705433ff8d3799',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'nextgenthemes/wp-settings' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'bc029f99b6ce1e36521f58fd2d81510a1e3913a3',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nextgenthemes/wp-settings',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
