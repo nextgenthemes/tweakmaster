@@ -1,5 +1,5 @@
 If you just want just use the plugin its on
-[wordpress.org](https://wordpress.org/tweakmaster).
+[wordpress.org](https://wordpress.org/plugins/tweakmaster/).
 
 # Contributing is very easy
 

@@ -61,15 +61,15 @@ Time in seconds to display email verification message on login. Set to 0 to disa
 a href links are allowed. Use "default" for default text.
 * **Remove Welcome Panel**<br>
 Removes the Welcome Panel from the dashboard.
-* **Remove "At a Glance" widget**<br>
+* **Remove <code>At a Glance</code> widget**<br>
 Removes the At a Glance dashboard widget.
-* **Remove "Activity" widget**<br>
+* **Remove <code>Activity</code> widget**<br>
 Removes the Activity dashboard widget.
-* **Remove "Quick Draft" widget**<br>
+* **Remove <code>Quick Draft</code> widget**<br>
 Removes the Quick Draft dashboard widget.
-* **Remove "WordPress Events and News" widget**<br>
+* **Remove <code>WordPress Events and News</code> widget**<br>
 Removes the WordPress Events and News dashboard widget.
-* **Remove "Site Health Status" widget**<br>
+* **Remove <code>Site Health Status</code> widget**<br>
 Removes the Site Health Status dashboard widget.
 * **404 Redirect Home**<br>
 Redirects 404 pages to the homepage.
